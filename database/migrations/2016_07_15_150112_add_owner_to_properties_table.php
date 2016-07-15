@@ -26,6 +26,7 @@ class AddOwnerToPropertiesTable extends Migration
     public function down()
     {
         Schema::table('properties', function (Blueprint $table) {
+            $table->dropForeign('properties_owner_id_foreign');
             $table->dropColumn('owner_id');
         });
     }
