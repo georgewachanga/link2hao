@@ -11,9 +11,9 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 <!--//fb-like-button-code-->
+<!--i removed include partials.header here-->
 
-@include("partials._header")
-@include("partials._navigation")
+        <!--i removed include partials.navigation here-->
 
 @yield("content")
 

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Link2hao -- | @yield("title")</title>
+    <title>Link2hao  | @yield("title")</title>
     <link href="/css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
     <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />

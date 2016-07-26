@@ -2,51 +2,48 @@
  <div class="demo-2">
 
      <div style="margin-top: -55px">
-        <header class="logo">
+
+
+          <header class="logo">
             <h1><a class="cd-logo link link--takiri" href="index.html">Link2hao.com <span>Because housing matters</span></a></h1>
+
         </header>
-        <div id="slider" class="sl-slider-wrapper">
+
+
+
+         <div id="slider" class="sl-slider-wrapper">
 
             <div class="sl-slider">
 
                 <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
                     <div class="sl-slide-inner">
-                        <div class="bg-img bg-img-1"></div>
-                        <h3>Real estate Agency.</h3>
-                        <blockquote><p>We  are trusted agents.</p><cite>SirGeorge</cite></blockquote>
+                        <div><img class="img-responsive " src="/imported/images/2.jpg" alt=""></div>
+
                     </div>
                 </div>
 
                 <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
                     <div class="sl-slide-inner">
-                        <div class="bg-img bg-img-2"></div>
-                        <h3>Advertising</h3>
-                        <blockquote><p>Digital advertising is the way</p><cite>Alberto</cite></blockquote>
-                    </div>
+                        <div><img class="img-responsive " src="/imported/images/1.jpg" alt=""></div>
+                         </div>
                 </div>
 
                 <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
                     <div class="sl-slide-inner">
-                        <div class="bg-img bg-img-3"></div>
-                        <h3>Booking.</h3>
-                        <blockquote><p>Everything online.</p><cite>Give a try</cite></blockquote>
-                    </div>
+                        <div><img class="img-responsive " src="/imported/images/5.jpg" alt=""></div>
+                        </div>
                 </div>
 
                 <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
                     <div class="sl-slide-inner">
-                        <div class="bg-img bg-img-4"></div>
-                        <h3>Reservation.</h3>
-                        <blockquote><p>Safe and secure reservations online no need to  worry.</p><cite>Georgie M.D.</cite></blockquote>
-                    </div>
+                        <div><img class="img-responsive " src="/imported/images/4.jpg" alt=""></div>
+                       </div>
                 </div>
 
                 <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
                     <div class="sl-slide-inner">
-                        <div class="bg-img bg-img-5"></div>
-                        <h3>Housing Consultancy.</h3>
-                        <blockquote><p>We have lots of worthy information for you.</p><cite>Estate consultant</cite></blockquote>
-                    </div>
+                        <div><img class="img-responsive " src="/imported/images/3.jpg" alt=""></div>
+                        </div>
                 </div>
             </div><!-- /sl-slider -->
 
@@ -62,8 +59,8 @@
      </div>
 
     </div>
-    <script type="text/javascript" src="js/jquery.ba-cond.min.js"></script>
-    <script type="text/javascript" src="js/jquery.slitslider.js"></script>
+    <script type="text/javascript" src="/js/jquery.ba-cond.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.slitslider.js"></script>
     <script type="text/javascript">
         $(function() {
 

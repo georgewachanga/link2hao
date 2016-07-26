@@ -394,6 +394,16 @@ header.logo {
     top: 30px;
     left: 5%;
 }
+
+
+header.search {
+    position: ABSOLUTE;
+    top: 30px;
+    left: 80%;
+}
+
+
+
 .cd-logo {
 	z-index: 99999;
 }
@@ -1579,7 +1589,7 @@ div#map iframe {
 }
 /* happy clients */
 section.happy-patients {
-	background: url('../images/happy.jpg') no-repeat 0px 0px;
+	background: url('../images/3.jpg') no-repeat 0px 0px;
     background-size: cover;
     min-height: 540px;
     background-attachment: fixed;

@@ -86,7 +86,7 @@
                                 <h3>want to  consult</h3>
                                 <p>The platform is open for you...simply amazing
                                 </p>
-                                <a href="single.html">Read More</a>
+                                <a href="consultancy">Read More</a>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -100,7 +100,7 @@
                                 <h3>Something more</h3>
                                 <p>yes...some thing else to be put here
                                 </p>
-                                <a href="single.html">Read More</a>
+                                <a href="single">Read More</a>
                             </div>
                             <div class="clearfix"></div>
                         </div>

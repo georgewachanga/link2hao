@@ -24,7 +24,7 @@
                         <div class="stats">
                             <h5>50 <span>%</span></h5>
                             <div class="grow grow1">
-                                <p>New Users</p>
+                                <p> Users</p>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                         <div class="stats">
                             <h5>70 <span>%</span></h5>
                             <div class="grow grow3">
-                                <p>Visitors</p>
+                                <p>Visits</p>
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                         <div class="stats">
                             <h5>70 <span>%</span></h5>
                             <div class="grow grow2">
-                                <p>Profit</p>
+                                <p>In Account</p>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                     <div class="col-md-4 switch-right">
                         <div class="switch-right-grid">
                             <div class="switch-right-grid1">
-                                <h3>TODAY'S STATS</h3>
+                                <h3>WEEKLY STATS</h3>
                                 <p>Duis aute irure dolor in reprehenderit.</p>
                                 <ul>
                                     <li>Earning: $400 USD</li>
@@ -127,7 +127,7 @@
                     <div class="col-md-4 switch-right">
                         <div class="switch-right-grid">
                             <div class="switch-right-grid1">
-                                <h3>ALLTIME STATS</h3>
+                                <h3>FULL STATS</h3>
                                 <p>Duis aute irure dolor in reprehenderit.</p>
                                 <ul>
                                     <li>Earning: $80,000 USD</li>

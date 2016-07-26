@@ -13,7 +13,7 @@
                 <div class="profile_details_left">
                     <ul class="nofitications-dropdown">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope"></i><span class="badge">3</span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-envelope"></i><span class="badge">376</span></a>
 
                             <ul class="dropdown-menu">
                                 <li>
@@ -75,7 +75,7 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <div class="notification_header">
-                                        <h3>You have 3 89new notification</h3>
+                                        <h3>Feedbacks</h3>
                                     </div>
                                 </li>
                                 <li><a href="#">
@@ -114,7 +114,7 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <div class="notification_header">
-                                        <h3>You have 8 pending task</h3>
+                                        <h3>You have 8 Reservations</h3>
                                     </div>
                                 </li>
                                 <li><a href="#">

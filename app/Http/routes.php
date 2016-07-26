@@ -11,6 +11,20 @@
 |
 */
 
+
+
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+
+
+
 Route::group(['middleware' => 'web'],
     function(){
 
@@ -27,12 +41,10 @@ Route::group(['middleware' => 'web'],
         return view('home.career')->withCareers($careers);
     });
 
-        Route::get('bikes', function () {
-            return view('home.bikes');
-        });
-
-
-
+        Route::resource('location','LocationController');
+        Route::resource('category','CategoryController');
+        Route::resource('property','PropertyController');
+        Route::resource('owner','OwnerController');
 
         Route::get('/','PagesController@GetIndex');
         Route::get('consultancy','PagesController@GetConsultancy');
@@ -45,16 +57,21 @@ Route::group(['middleware' => 'web'],
         Route::get('webdesign','PagesController@GetWebdesign');
         Route::get('sitemap','PagesController@GetSitemap');
         Route::get('login','PagesController@GetLogin');
+        Route::get('loginn','PagesController@GetLoginn');
         Route::get('blog','PagesController@GetBlog');
         Route::get('about','PagesController@GetAbout');
         Route::get('contact','PagesController@GetContact');
         Route::get('test','PagesController@GetTest');
-        Route::get('single','PagesController@GetSingle');
-        Route::get('book','PagesController@GetBook');
+        Route::get('single/{id}/{name}','PagesController@GetSingle');
+        Route::get('info','PagesController@GetInfo');
         Route::get('faq','PagesController@GetFaq');
         Route::get('terms','PagesController@GetTerms');
         Route::get('registration','PagesController@GetRegistration');
         Route::get('advertise','PagesController@GetAdvertise');
+        Route::get('news','PagesController@GetNews');
+        Route::get('slide','PagesController@GetSlide');
+
+
 
 
 
@@ -66,8 +83,6 @@ Route::group(['middleware' => 'web'],
         $career = App\Career::find($id);
         return view('home.view-job')->withCareer($career);
     });
-
-        Route::resource('comment','CommentController');
 });
 
 
@@ -96,3 +111,7 @@ Route::get('widgets','PagesController@GetWidgets');
 
 
 
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

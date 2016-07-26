@@ -23,11 +23,24 @@
                     <li><a href="widgets">Widgets</a></li>
                 </ul>
             </li>
-            <li><a href="forms"><i class="lnr lnr-spell-check"></i> <span>Forms</span></a></li>
-            <li><a href="tables"><i class="lnr lnr-menu"></i> <span>Tables</span></a>
+            <li><a href="forms"><i class="lnr lnr-spell-check"></i> <span>FORMS</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="inbox">Inbox</a> </li>
-                    <li><a href="compose">Compose Mail</a></li>
+                    <li><a href="owner/create">New Owner</a> </li>
+                    <li><a href="admin/location/create">New Location</a></li>
+                    <li><a href="admin/category/create">New Category</a> </li>
+                    <li><a href="admin/feature/create">New Feature</a></li>
+                    <li><a href="admin/property/create">Property</a></li>
+                </ul>
+            </li>
+            <li><a href="tables"><i class="lnr lnr-menu"></i> <span>TABLES</span></a>
+                <ul class="sub-menu-list">
+                    <li><a href="inbox">Locations</a> </li>
+                    <li><a href="compose">Categories</a></li>
+                    <li><a href="inbox">Users</a> </li>
+                    <li><a href="compose">Owners</a></li>
+                    <li><a href="inbox">Properties</a> </li>
+                    <li><a href="compose">Features</a></li>
+
                 </ul>
             </li>
 

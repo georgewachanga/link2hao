@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Property;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -12,7 +13,10 @@ class PagesController extends Controller
     //frontend routes
     public function getIndex()
     {
-        return view('home.index');
+       // return view('home.index');
+       // $properties= Property::all();
+        $properties= Property::all();
+        return view('home.index', ['properties'=>$properties]);
     }
 
     public function getConsultancy()
@@ -46,27 +50,41 @@ class PagesController extends Controller
     public function getLogin()
     {
         return view('home.login');
-    }public function getBlog()
-{
+    }
+
+    public function getLoginn()
+    {
+        return view('home.loginn');
+    }
+
+    public function getBlog()
+    {
     return view('home.blog');
-}public function getAbout()
-{
+    }
+    public function getAbout()
+    {
     return view('home.about');
-}
+    }
     public function getContact()
     {
         return view('home.contact');
     }
 
-    public function getBook()
+    public function getInfo()
     {
-        return view('home.book');
+        return view('home.Info');
+    }
+
+    public function getSlide()
+    {
+        return view('home.slide');
     }
 
 
-    public function getSingle()
+    public function getSingle($id)
     {
-        return view('home.single');
+        $property = Property::findOrFail($id);
+        return view('home.single')->with('property', $property);
     }
     public function getFaq()
     {
@@ -84,6 +102,12 @@ class PagesController extends Controller
     public function getAdvertise()
     {
         return view('home.advert');
+    }
+
+
+    public function getNews()
+    {
+        return view('home.news');
     }
 //admin admin admin v admin admin admin admin admin admin admin admin admin admin v
 
@@ -128,6 +152,7 @@ class PagesController extends Controller
     {
         return view('admin.compose');
     }
+
 
 
 }

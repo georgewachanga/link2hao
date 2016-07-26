@@ -2,319 +2,87 @@
 @section("title", "Home")
 @section("styles")
     @include("partials._styles")
+    @include("partials._slidestyles")
     @endsection
 
 @section("content")
 
-    @include("partials._slider")
+    @include("partials._slide")
 
 
-
-   @include("partials._search")
+<!--partials.search was here-->
 <div class="container-fluid">
 
     <div class="row">
 
         <div class="col-md-3 timing">
 
-          SEARCH HERE
-            <table class="table-responsive">
 
-                <tr>
-                    <td>CATEGORY</td>
-                    <td>
-                        <select class="form-control">
-                            <option>CATEGORY</option>
-                            <option>Hostels</option>
-                            <option>Rentals</option>
-                            <option>Apartments</option>
-
-                        </select>
-                    </td>
-
-
-                </tr>
-                <tr>
-                    <td>LOCATION</td>
-                    <td>
-                        <select class="form-control">
-
-                            <option>LOCATION</option>
-                            <option>Lurambi</option>
-                            <option>Makuti</option>
-                            <option>Sichirai</option>
-                            <option>Juakali</option>
-                        </select>
-                    </td>
-
-
-                </tr>
-                <tr>
-                    <td>PRICE RANGE</td>
-
-                    <td><select class="form-control">
-                        <option>SELECT</option>
-                        <option>1000-2000</option>
-                        <option>2000-3000</option>
-                        </select>
-                    </td>
-
-
-                </tr>
-                <tr>
-                    <td>  <button type="button" class="btn btn primary btn-lg btn-block">CANCEL</button></td>
-                    <td>
-                        <button type="button" class="btn btn primary btn-lg btn-block">SEARCH</button>
-
-                    </td>
-
-                </tr>
-
-
-            </table>
-
-<div>
-
-    more adverts here
-
-</div>
+<div>adverts here</div>
 
 
         </div>
 
 
-        <div><h1>ALL HOUSES</h1></div>
+        <div><h1>THESE ARE THE AVAILABLE HOUSES.</h1></div>
         <div class="col-md-9">
 
             <div class="living_middle">
                 <div class="container">
-
-                    <div class="col-md-9 wow fadeInRight" data-wow-delay="0.4s">
-
-                        <div class="educate_grid">
-                            <div class="col-md-4 room-grid">
-                                <div class="living_box">
-                                    <a href="single">
-                                        <img src="imported/images/e1.jpg" class="img-responsive" alt=""/>
-                                        <span class="sale-box">
-				                             <span class="sale-label">Balcony</span>
-                                        </span>
-                                    </a>
-
-
-
-
-                                    <div class="living_desc">
-                                        <h3><a href="#">aliquam volutp</a></h3>
-                                        <p>Lorem ipsum consectetuer adipiscing </p>
-                                        <a href="single" class="btn3">Rent</a>
-                                        <p class="price">$100.00</p>
-                                    </div>
-                                    <table border="1" class="propertyDetails">
-                                        <tbody><tr>
-                                            <td><img src="imported/images/area.png" alt="" style="margin-right:7px;">2,412m</td>
-                                            <td><img src="imported/images/bed.png" alt="" style="margin-right:7px;">6 Beds</td>
-                                            <td><img src="imported/images/drop.png" alt="" style="margin-right:7px;">3 Baths</td>
-                                        </tr>
-                                        </tbody></table>
-
-
-
-
-                                </div>
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            <div class="col-md-4 room-grid">
-                                <div class="living_box">
-                                    <a href="single">
-                                        <img src="imported/images/e2.jpg" class="img-responsive" alt=""/>
-				                        <span class="sale-box">
-				                            <span class="sale-label">Pool</span>
-			                            </span>
-                                    </a>
-
-                                    <div class="living_desc">
-                                        <h3><a href="#">aliquam volutp</a></h3>
-                                        <p>Lorem ipsum consectetuer adipiscing </p>
-                                        <a href="single" class="btn3">Rent</a>
-                                        <p class="price">$100.00</p>
-                                    </div>
-                                    <table border="1" class="propertyDetails">
-                                        <tbody><tr>
-                                            <td><img src="imported/images/area.png" alt="" style="margin-right:7px;">2,412m</td>
-                                            <td><img src="imported/images/bed.png" alt="" style="margin-right:7px;">6 Beds</td>
-                                            <td><img src="imported/images/drop.png" alt="" style="margin-right:7px;">3 Baths</td>
-                                        </tr>
-                                        </tbody></table>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 room-grid">
-                                <div class="living_box">
-                                    <a href="single">
-                                        <img src="imported/images/e2.jpg" class="img-responsive" alt=""/>
-				                        <span class="sale-box">
-				                            <span class="sale-label">Pool</span>
-			                            </span>
-                                    </a>
-
-                                    <div class="living_desc">
-                                        <h3><a href="#">aliquam volutp</a></h3>
-                                        <p>Lorem ipsum consectetuer adipiscing </p>
-                                        <a href="single" class="btn3">Rent</a>
-                                        <p class="price">$100.00</p>
-                                    </div>
-                                    <table border="1" class="propertyDetails">
-                                        <tbody><tr>
-                                            <td><img src="imported/images/area.png" alt="" style="margin-right:7px;">2,412m</td>
-                                            <td><img src="imported/images/bed.png" alt="" style="margin-right:7px;">6 Beds</td>
-                                            <td><img src="imported/images/drop.png" alt="" style="margin-right:7px;">3 Baths</td>
-                                        </tr>
-                                        </tbody></table>
-
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-
+                   @foreach($properties->chunk(3) as $propertyChunk)
 
 
                     <div class="col-md-9 wow fadeInRight" data-wow-delay="0.4s">
 
                         <div class="educate_grid">
+                            @foreach($propertyChunk as $property)
                             <div class="col-md-4 room-grid">
                                 <div class="living_box">
                                     <a href="single">
-                                        <img src="imported/images/e1.jpg" class="img-responsive" alt=""/>
+                                        <img src="/imported/{{ $property->imagepath }}" class="img-responsive" alt=""/>
                                         <span class="sale-box">
-				                             <span class="sale-label">Balcony</span>
+				                             <span class="sale-label">{{$property->category}}</span>
                                         </span>
                                     </a>
 
                                     <div class="living_desc">
-                                        <h3><a href="#">aliquam volutp</a></h3>
-                                        <p>Lorem ipsum consectetuer adipiscing </p>
-                                        <a href="single" class="btn3">Rent</a>
-                                        <p class="price">$100.00</p>
+                                        <h3><a href="#">{{$property->name}}</a></h3>
+                                        <p>property description </p>
+                                        <a href="/single/{{ $property->id }}/{{ $property->name }}" class="btn3">View</a>
+                                        <p class="price">Ksh{{$property->price}}/=</p>
                                     </div>
                                     <table border="1" class="propertyDetails">
                                         <tbody><tr>
-                                            <td><img src="imported/images/area.png" alt="" style="margin-right:7px;">2,412m</td>
-                                            <td><img src="imported/images/bed.png" alt="" style="margin-right:7px;">6 Beds</td>
-                                            <td><img src="imported/images/drop.png" alt="" style="margin-right:7px;">3 Baths</td>
+                                            <td><img src="/imported/images/area.png" alt="" style="margin-right:7px;">2,412m</td>
+                                            <td><img src="/imported/images/bed.png" alt="" style="margin-right:7px;">6 Beds</td>
+                                            <td><img src="/imported/images/drop.png" alt="" style="margin-right:7px;">3 Baths</td>
                                         </tr>
                                         </tbody></table>
 
-                                </div>
-                            </div>
-                            <div class="col-md-4 room-grid">
-                                <div class="living_box">
-                                    <a href="single">
-                                        <img src="imported/images/e2.jpg" class="img-responsive" alt=""/>
-				                        <span class="sale-box">
-				                            <span class="sale-label">Pool</span>
-			                            </span>
-                                    </a>
 
-                                    <div class="living_desc">
-                                        <h3><a href="#">aliquam volutp</a></h3>
-                                        <p>Lorem ipsum consectetuer adipiscing </p>
-                                        <a href="single" class="btn3">Rent</a>
-                                        <p class="price">$100.00</p>
-                                    </div>
-                                    <table border="1" class="propertyDetails">
-                                        <tbody><tr>
-                                            <td><img src="imported/images/area.png" alt="" style="margin-right:7px;">2,412m</td>
-                                            <td><img src="imported/images/bed.png" alt="" style="margin-right:7px;">6 Beds</td>
-                                            <td><img src="imported/images/drop.png" alt="" style="margin-right:7px;">3 Baths</td>
-                                        </tr>
-                                        </tbody></table>
+
 
                                 </div>
                             </div>
+                            @endforeach
 
-                            <div class="col-md-4 room-grid">
-                                <div class="living_box">
-                                    <a href="single">
-                                        <img src="imported/images/e2.jpg" class="img-responsive" alt=""/>
-				                        <span class="sale-box">
-				                            <span class="sale-label">Pool</span>
-			                            </span>
-                                    </a>
 
-                                    <div class="living_desc">
-                                        <h3><a href="#">aliquam volutp</a></h3>
-                                        <p>Lorem ipsum consectetuer adipiscing </p>
-                                        <a href="single" class="btn3">Rent</a>
-                                        <p class="price">$100.00</p>
-                                    </div>
-                                    <table border="1" class="propertyDetails">
-                                        <tbody><tr>
-                                            <td><img src="imported/images/area.png" alt="" style="margin-right:7px;">2,412m</td>
-                                            <td><img src="imported/images/bed.png" alt="" style="margin-right:7px;">6 Beds</td>
-                                            <td><img src="imported/images/drop.png" alt="" style="margin-right:7px;">3 Baths</td>
-                                        </tr>
-                                        </tbody></table>
 
-                                </div>
-                            </div>
+
+
+
+
+
+
+
                             <div class="clearfix"></div>
                         </div>
                     </div>
+                        @endforeach
+
+
+
+
                 </div>
             </div>
 
@@ -329,15 +97,15 @@
 
     <div class="living_bottom">
         <div class="container">
-            <h2 class="title block-title">Latest Houses</h2>
+            <h2 class="title block-title">RECCOMENDED HOUSES</h2>
             <div class="col-md-6 post_left wow fadeInLeft" data-wow-delay="0.4s">
-                <div class="mask1"><img src="imported/images/pic4.jpg" alt="image" class="img-responsive zoom-img" /></div>
+                <div class="mask1"><img src="/imported/images/pic4.jpg" alt="image" class="img-responsive zoom-img" /></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque cursus, sem eget sagittis sagittis, nisl magna sodales eros, ut feugiat velit velit non turpis. Cras eu nibh dapibus justo fringilla   <a href="single">More</a></p>
                 <div class="divider"></div>
                 <p class="field-content">30 Sep 2015</span></p>
             </div>
             <div class="col-md-6 post_left wow fadeInRight" data-wow-delay="0.4s">
-                <div class="mask1"><img src="imported/images/pic5.jpg" alt="image" class="img-responsive zoom-img" /></div>
+                <div class="mask1"><img src="/imported/images/pic5.jpg" alt="image" class="img-responsive zoom-img" /></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque cursus, sem eget sagittis sagittis, nisl magna sodales eros, ut feugiat velit velit non turpis. Cras eu nibh dapibus justo fringilla   <a href="single">More</a></p>
                 <div class="divider"></div>
                 <p class="field-content">30 Sep 2015</span></p>
@@ -360,12 +128,12 @@
     <div class="news-section" id="news">
         <div class="container">
             <div class="news-section-head text-center">
-                <h3>RECCOMENDED HOUSES</h3>
+                <h3>STILL WONDERING WHERE TO BUY CLOTHING?</h3>
                 <p>Here, there and everywhere... what we've been doing</p>
             </div>
             <div class="news-section-grids">
                 <div class="col-md-4 news-section-grid">
-                    <img src="images/1.jpg" alt="" />
+                    <img src="/images/1.jpg" alt="" />
                     <div class="info">
                         <a class="news-title" href="single">RIAM HOSTELS</a>
                         <label>August18</label>
@@ -374,7 +142,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 news-section-grid">
-                    <img src="images/2.jpg" alt="" />
+                    <img src="/images/2.jpg" alt="" />
                     <div class="info">
                         <a class="news-title" href="single">IJAB HOSTELS</a>
                         <label>August 28</label>
@@ -383,7 +151,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 news-section-grid">
-                    <img src="images/3.jpg" alt="" />
+                    <img src="/images/3.jpg" alt="" />
                     <div class="info">
                         <a class="news-title" href="single">PALMLEAF HOSTELS</a>
                         <label>September 12</label>
@@ -441,7 +209,7 @@
         </div>
     </div>
     <!-- //Stats -->
-    <script type="text/javascript" src="js/numscroller-1.0.js"></script>
+    <script type="text/javascript" src="/js/numscroller-1.0.js"></script>
 
 
 
