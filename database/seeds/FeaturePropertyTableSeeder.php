@@ -13,12 +13,29 @@ class FeaturePropertyTableSeeder extends Seeder
      */
     public function run()
     {
-        $features = Feature::all();
         $properties = Property::all();
 
         foreach($properties as $property)
         {
-            $
+            $count = 0;
+            $rand = rand(3,7);
+            while($count < $rand)
+            {
+                $feature = Feature::find(rand(1,Feature::count()));
+                if($property->features->contains($feature))
+                {
+                    print "[!} Has feature";
+                    print $count;
+                    continue;
+                }
+                else{
+                    $property->features()->save($feature);
+                    $count ++;
+                    print $count."\n";
+                }
+            }
+            print "[**************************]";
+            print "\n";
         }
     }
 }

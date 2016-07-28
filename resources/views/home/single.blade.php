@@ -69,14 +69,9 @@
             <div class="grid-categories">
                 <h4>We offer...</h4>
                 <ul class="popular ">
-                    <li><a href="#"><i class="glyphicon glyphicon-ok"> </i>Contrary to popular belief</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-ok"> </i>There are many variation</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-ok"> </i>Lorem Ipsum is simply</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-ok"> </i>Sed ut perspiciatis unde</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-ok"> </i>Nemo enim ipsam volume</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-ok"> </i>At vero eos et accusamus</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-ok"> </i>Contrary to popular belief</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-ok"> </i>There are many variation</a></li>
+                    @foreach($property->features as $feature)
+                        <li><a href="#"><i class="glyphicon glyphicon-ok"> </i>{{ $feature->name }}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <div class="grid-categories">
@@ -88,13 +83,9 @@
                 </ul>
             </div>
             <div >
-<<<<<<< HEAD
            <a href="/info"><input type="button" class="btn btn-success" value="CLICK TO RESERVE NOW FOR ONLY KSH 100/="> </a>
-=======
 
 <a href="/info"> click 2 book</a>
-
->>>>>>> ea1bb8964aa89496ae76cd48194c23d98b963def
 
             </div>
 
