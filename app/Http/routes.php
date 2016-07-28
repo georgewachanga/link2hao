@@ -76,6 +76,8 @@ Route::group(['middleware' => 'web'],
         Route::get('news','PagesController@GetNews');
         Route::get('slide','PagesController@GetSlide');
 
+        Route::post('search', 'PagesController@getIndex');
+
 
 
 

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Property;
+use App\Category;
+use App\Location;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -11,13 +13,17 @@ class PagesController extends Controller
 {
 
     //frontend routes
+    /**
     public function getIndex()
     {
        // return view('home.index');
        // $properties= Property::all();
         $properties= Property::all();
-        return view('home.index', ['properties'=>$properties]);
+        $categories = Category::lists('name', 'id');
+        $locations = Location::lists('name','id');
+        return view('home.index', ['properties'=>$properties, 'categories' => $categories, 'locations' => $locations]);
     }
+     */
 
     public function getConsultancy()
     {
@@ -151,6 +157,77 @@ class PagesController extends Controller
     public function getCompose()
     {
         return view('admin.compose');
+    }
+
+    public function getIndex(Request $request)
+    {
+        $categories = Category::lists('name', 'id');
+        $categories->prepend('Category', 0);
+        $locations = Location::lists('name', 'id');
+        $locations->prepend('Location', 0);
+        $cat = $request->category;
+        $loc = $request->location;
+
+        $category = Category::find($cat);
+
+        $location = Location::find($loc);
+
+        if($category)
+        {
+            if(!$location)
+            {
+                $properties = $category->properties;
+                if(!$properties)
+                {
+                    $message = "No Available ".$category->name;
+                }
+                else
+                {
+                    $message = "Available ".$category->name;
+                }
+            }
+            else
+            {
+                $properties = Property::where('location_id', '=', $location->id)->where('category_id', $category->id)->get();
+                if($properties)
+                {
+                    $message = "Available ".$category->name." in ".$location->name;
+                }
+                else
+                {
+                    $message = "There is no available ".$category->name." in ".$location->name;
+                }
+
+            }
+        }
+        elseif($location)
+        {
+            $properties = $location->properties;
+            if($properties)
+            {
+                $message = "Houses in ".$location->name;
+            }
+            else
+            {
+                $message = "No Available Houses in ".$location->name;
+            }
+
+        }
+        else
+        {
+            $properties = Property::all();
+            if($properties)
+            {
+                $message = "Available Houses";
+            }
+            else
+            {
+                $message = "We couldn't find any houses yet!! help us get one";
+            }
+
+        }
+
+        return view('home.index', ['properties'=>$properties, 'categories' => $categories, 'locations' => $locations, 'message' => $message]);
     }
 
 

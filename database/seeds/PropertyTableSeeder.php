@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\Property;
+use App\Category;
+use App\Location;
 
 class PropertyTableSeeder extends Seeder
 {
@@ -12,7 +14,6 @@ class PropertyTableSeeder extends Seeder
      */
     public function run()
     {
-        $categories = ['rental','hostel'];
         $faker = \Faker\Factory::create();
 
         //Property::truncate();
@@ -20,17 +21,22 @@ class PropertyTableSeeder extends Seeder
         {
             $property=new Property([
                 'name'=> $faker->city,
-                'category'=>$categories[array_rand($categories)],
                 'price'=> $faker->numberBetween(15,200) *  100,
-                'location'=>$faker->country,
                 'description'=> $faker->text,
                 'imagepath'=>'images/'.rand(1,5).'.jpg',
                 'ownerIdNo'=>rand(0,20)
-
             ]);
             $property->save();
+            $cat = Category::find(rand(1, Category::count()));
+            $loc = Location::find(rand(1, Location::count()));
 
-            print '[+] Added '.$property->name.'\n';
+            $cat->properties()->save($property);
+            $loc->properties()->save($property);
+
+            print '[+] Added '.$property->name."\n";
+            print "[******]\n";
+            print "\n";
+
         }
 
 
