@@ -24,7 +24,7 @@
         </div>
 
 
-        <div><h1>THESE ARE THE AVAILABLE HOUSES.</h1></div>
+        <div><h1 style="text-align: center">{{ strtoupper($message) }}</h1></div>
         <div class="col-md-9">
 
             <div class="living_middle">
@@ -38,16 +38,25 @@
                             @foreach($propertyChunk as $property)
                             <div class="col-md-4 room-grid">
                                 <div class="living_box">
-                                    <a href="single">
+                                    <a href="/single/{{ $property->id }}/{{ $property->name }}">
                                         <img src="/imported/{{ $property->imagepath }}" class="img-responsive" alt=""/>
                                         <span class="sale-box">
-				                             <span class="sale-label">{{$property->category}}</span>
+				                             <span class="sale-label">
+                                                 @if($property->category)
+                                                    {{$property->category->name}}
+                                                 @endif
+                                             </span>
                                         </span>
                                     </a>
 
                                     <div class="living_desc">
-                                        <h3><a href="#">{{$property->name}}</a></h3>
-                                        <p>property description </p>
+                                        <h3><a href="/single/{{ $property->id }}/{{ $property->name }}">{{$property->name}}</a></h3>
+                                        <p>{{ $property->description }} </p>
+                                        <h3><a href="/single/{{ $property->id }}/{{ $property->name }}">
+                                            @if($property->location)
+                                                {{$property->location->name}}
+                                            @endif
+                                            </a></h3>
                                         <a href="/single/{{ $property->id }}/{{ $property->name }}" class="btn3">View</a>
                                         <p class="price">Ksh{{$property->price}}/=</p>
                                     </div>

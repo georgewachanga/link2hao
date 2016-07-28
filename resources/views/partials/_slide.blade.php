@@ -102,34 +102,17 @@
             <h1><a href="/"><span class="logo-sub">www.</span> Link2hao <span class="logo-sub">.com</span> </a></h1>
             <h2><span>COME FIND THE </span> <span>HOUSE OF YOUR CHOICE</span></h2>
             <p>Because Housing matters</p>
-            <form action="#" method="post">
+            {!! Form::open(array('url' => '/search', 'method' => 'POST' )) !!}
                 <div class="search-two">
-                    <select id="country" onchange="change_country(this.value)" class="frm-field required">
-                        <option value="null">Category</option>
-
-                        <option value="Hostel">Hostel</option>
-                        <option value="Rental">Rental</option>
-                        <option value="Apartments">Apartments</option>
-                        <option value="Cottages">Cottages</option>
-
-                    </select>
+                    {{Form::select('category', $categories, null, array('class'=>'frm-field required', 'id' => 'country', 'onchange' => 'change_country(this.value)'))}}
                 </div>
                 <div class="section_room">
-                    <select id="country" onchange="change_country(this.value)" class="frm-field required">
-                        <option value="null"> Location</option>
-
-                        <option value="Lurambi">Lurambi</option>
-                        <option value="Makuti">Makuti</option>
-                        <option value="Sichirai">Sichirai</option>
-                        <option value="Kefinko">Kefinko</option>
-
-
-                    </select>
+                    {{Form::select('location', $locations, null, array('class'=>'frm-field required', 'id' => 'country', 'onchange' => 'change_country(this.value)'))}}
                 </div>
 
                 <input type="submit" value="Find House">
                 <div class="clearfix"></div>
-            </form>
+            {{ Form::close() }}
         </div>
         <!--//banner-info-->
     </div>

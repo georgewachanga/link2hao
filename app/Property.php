@@ -18,4 +18,14 @@ class Property extends Model
         return $this->hasMany('App\Image');
     }
 
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
+
+    public function location()
+    {
+        return $this->belongsTo('App\Location');
+    }
+
 }
