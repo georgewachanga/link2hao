@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
+use App\Contact;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use Illuminate\Support\Facades\App;
 
-class CategoryController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +16,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories=Category::all();
-        return view('admin.category.index',['categories'=>$categories]);
+        return view('home.contact');
     }
 
     /**
@@ -28,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.category.create');
+        //
     }
 
     /**
@@ -39,18 +37,20 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $contact=new Contact([
 
-        $category = new  Category([
-                'name' => $request->name
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'telephone'=>$request->telephone,
+            'message'=>$request->message,
 
-            ]
-        );
+        ]);
+        $contact->save();
 
+        return redirect('/contact');
+    }
 
-
-        $category->save();
-
-    }  /**
+    /**
      * Display the specified resource.
      *
      * @param  int  $id

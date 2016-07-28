@@ -25,21 +25,21 @@
             </li>
             <li><a href="forms"><i class="lnr lnr-spell-check"></i> <span>FORMS</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="owner/create">New Owner</a> </li>
-                    <li><a href="admin/location/create">New Location</a></li>
-                    <li><a href="admin/category/create">New Category</a> </li>
-                    <li><a href="admin/feature/create">New Feature</a></li>
-                    <li><a href="admin/property/create">Property</a></li>
+                    <li><a href="/owner/create">New Owner</a> </li>
+                    <li><a href="/location/create">New Location</a></li>
+                    <li><a href="/category/create">New Category</a> </li>
+                    <li><a href="/features/create">New Feature</a></li>
+                    <li><a href="/property/create">Property</a></li>
                 </ul>
             </li>
             <li><a href="tables"><i class="lnr lnr-menu"></i> <span>TABLES</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="inbox">Locations</a> </li>
-                    <li><a href="compose">Categories</a></li>
-                    <li><a href="inbox">Users</a> </li>
-                    <li><a href="compose">Owners</a></li>
-                    <li><a href="inbox">Properties</a> </li>
-                    <li><a href="compose">Features</a></li>
+                    <li><a href="/location">Locations</a> </li>
+                    <li><a href="/category">Categories</a></li>
+                    <li><a href="/user">Users</a> </li>
+                    <li><a href="/owner">Owners</a></li>
+                    <li><a href="/property">Properties</a> </li>
+                    <li><a href="/features">Features</a></li>
 
                 </ul>
             </li>

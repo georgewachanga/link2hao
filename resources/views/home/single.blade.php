@@ -3,6 +3,8 @@
 
 @section("styles")
 @include("partials._styles")
+        @include("partials._slidestyles")
+
 @endsection
 
 @section("content")
@@ -86,7 +88,13 @@
                 </ul>
             </div>
             <div >
+<<<<<<< HEAD
            <a href="/info"><input type="button" class="btn btn-success" value="CLICK TO RESERVE NOW FOR ONLY KSH 100/="> </a>
+=======
+
+<a href="/info"> click 2 book</a>
+
+>>>>>>> ea1bb8964aa89496ae76cd48194c23d98b963def
 
             </div>
 

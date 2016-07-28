@@ -64,13 +64,20 @@
             </div>
             <div class="contact-form">
                 <h4>CONTACT FORM</h4>
-                <form>
-                    <input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+
+                {!! Form::open(array('route' => 'contact.store', 'method' => 'POST', 'files' => true )) !!}
+                    <!--input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
                     <input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
                     <input type="text" value="Telephone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
                     <textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-                    <input type="submit" value="Submit" >
-                </form>
+                    <input type="submit" value="Submit"-->
+
+                     <input placeholder="Your name" name="name" class="user" type="text" required="">
+                <input placeholder="Your Email" name="email" class="user" type="text" required="">
+                <input placeholder="Mobile No." name="telephone" class="user" type="text" required="">
+                <textarea type="text"  placeholder="your message here" name="message" class="user"  required=""></textarea>
+            <input type="submit" value="Subscribe">
+                {!! Form::close() !!}
             </div>
 
         </div>

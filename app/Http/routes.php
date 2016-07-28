@@ -45,6 +45,11 @@ Route::group(['middleware' => 'web'],
         Route::resource('category','CategoryController');
         Route::resource('property','PropertyController');
         Route::resource('owner','OwnerController');
+        Route::resource('features','FeatureController');
+        Route::resource('subscription','SubscriptionController');
+        Route::resource('contact','ContactController');
+
+
 
         Route::get('/','PagesController@GetIndex');
         Route::get('consultancy','PagesController@GetConsultancy');
@@ -81,9 +86,10 @@ Route::group(['middleware' => 'web'],
 
 
 
-        Route::get('career/{id}/{name}', function($id) {
-        $career = App\Career::find($id);
-        return view('home.view-job')->withCareer($career);
+
+        Route::get('career', function() {
+
+        return view('home.view-job');
     });
 });
 

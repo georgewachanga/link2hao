@@ -21,8 +21,8 @@
                     </form>
                 </div>
                 <!-- search-scripts -->
-                <script src="slider/js/classie.js"></script>
-                <script src="slider/js/uisearch.js"></script>
+                <script src="/slider/js/classie.js"></script>
+                <script src="/slider/js/uisearch.js"></script>
                 <script>
                     new UISearch( document.getElementById( 'sb-search' ) );
                 </script>
@@ -100,7 +100,7 @@
         <!--banner-info-->
         <div class="banner-info">
             <h1><a href="/"><span class="logo-sub">www.</span> Link2hao <span class="logo-sub">.com</span> </a></h1>
-            <h2><span>COME FIND THE </span> <span>HOUSE OF YOUR CHOICE</span></h2>
+            <h2><span>FIND LISTED  </span> <span>HOUSES FOR MMUST STUDENTS AROUND KAKAMEGA</span></h2>
             <p>Because Housing matters</p>
             {!! Form::open(array('url' => '/search', 'method' => 'POST' )) !!}
                 <div class="search-two">
@@ -124,9 +124,9 @@
             <div class="modal-header">
                 <button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div class="discount">
-                    <h3>Get Offers & Discount of</h3>
-                    <p>Catchy Carz Brand VL in New York</p>
-                    <form action="#" method="post">
+                    <h3>Advertise your property and let it be seen</h3>
+                    <p>Create an account to advertise</p>
+                    <!--form action="#" method="post">
                         <select id="country5" onchange="change_country(this.value)" class="frm-field required">
                             <option selected="selected" value="-1">-Buying Time Period-</option>
                             <option value="0">Just Researching</option>
@@ -136,24 +136,27 @@
                             <option value="60">2 Months</option>
                         </select>
                         <input type="text" name="pin code" class="Pin code" placeholder="Pin code" required="">
-                    </form>
+                    </form-->
                 </div>
             </div>
             <div class="modal-body about">
 
                 <div class="dis-contact">
-                    <h4>Contact Information</h4>
+                    <h4>Personal Information</h4>
                     <form action="#" method="post">
-                        <input type="text" name="name" class="name active" placeholder="Name" required="">
-                        <input type="text" name="email" class="email" placeholder="Email" required="">
-                        <input type="text" name="phone" class="phone" placeholder="Phone" required="">
+                        <input type="text" name="name" class="name active" placeholder="Property Name" required="">
+                        <input type="text" name="category" class="name active" placeholder="Category" required="">
+                        <input type="text" name="price" class="phone" placeholder="Price" required="">
+                        <input type="text" name="location" class="name active" placeholder="Location" required="">
+                        <input type="text" name="description" class="name active" placeholder="Property Description" required="">
+                        <input type="text" name="imagepath" class="name active" placeholder="Profile Image" required="">
                         <div class="d-c">
 														<span class="checkbox1">
 															<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>I agree to Terms and Conditions.</label>
 														</span>
 
                         </div>
-                        <input type="submit" value="Find Offers">
+                        <input type="submit" value="Submit">
 
                     </form>
                 </div>
@@ -163,55 +166,46 @@
 </div>
 <!-- //discounts-->
 <!-- //sign-up-->
-<div class="modal ab fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog sign" role="document">
-        <div class="modal-content about">
-            <div class="modal-header one">
-                <button type="button" class="close sg" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <div class="discount one">
-                    <h3>Sign Up</h3>
-
-                </div>
-            </div>
-            <div class="modal-body about">
-                <div class="login-top sign-top one">
-                    <form action="#" method="post">
-                        <input type="text" name="name" class="name active" placeholder="Your Name" required="">
-                        <input type="text" name="email "class="email" placeholder="Email" required="">
-                        <input type="password" name="password" class="password" placeholder="Password" required="">
-                        <input type="checkbox" id="brand1" value="">
-                        <label for="brand1"><span></span> Remember me?</label>
-                        <div class="login-bottom one">
-                            <ul>
-                                <li>
-                                    <a href="#">Forgot password?</a>
-                                </li>
-                                <li>
-
-                                    <input type="submit" value="SIGN UP">
-
-                                </li>
-                                <div class="clearfix"></div>
-                            </ul>
-                        </div>
-                    </form>
-
-                </div>
+@include("partials._signup")
 
 
-            </div>
-            <div class="social-icons">
-                <ul>
-                    <li><a href="#"><span class="icons"></span><span class="text">Facebook</span></a></li>
-                    <li class="twt"><a href="#"><span class="icons"></span><span class="text">Twitter</span></a></li>
-                    <li class="ggp"><a href="#"><span class="icons"></span><span class="text">Google+</span></a></li>
-                </ul>
-            </div>
 
-        </div>
-    </div>
-</div>
-<!-- //sign-up-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- /location-->
 <div class="modal ab fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog sign" role="document">

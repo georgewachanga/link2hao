@@ -9,6 +9,13 @@ h1, h2, h3 {margin-top: 0;}
 ul, ol {margin: 0;}
 p {margin: 0;}
 
+.adminn{
+
+	margin-top: 20px;
+	margin-left: 25px;
+	padding: 20px;
+}
+
 html, body{
   	font-family: 'Cabin', sans-serif;
     font-size: 100%;

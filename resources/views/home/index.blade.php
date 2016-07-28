@@ -10,6 +10,11 @@
     @include("partials._slide")
 
 
+
+
+
+
+
 <!--partials.search was here-->
 <div class="container-fluid">
 
@@ -38,7 +43,11 @@
                             @foreach($propertyChunk as $property)
                             <div class="col-md-4 room-grid">
                                 <div class="living_box">
+<<<<<<< HEAD
                                     <a href="/single/{{ $property->id }}/{{ $property->name }}">
+=======
+                                    <a href="single/{{ $property->id }}/{{ $property->name }}">
+>>>>>>> ea1bb8964aa89496ae76cd48194c23d98b963def
                                         <img src="/imported/{{ $property->imagepath }}" class="img-responsive" alt=""/>
                                         <span class="sale-box">
 				                             <span class="sale-label">
@@ -51,12 +60,16 @@
 
                                     <div class="living_desc">
                                         <h3><a href="/single/{{ $property->id }}/{{ $property->name }}">{{$property->name}}</a></h3>
+<<<<<<< HEAD
                                         <p>{{ $property->description }} </p>
                                         <h3><a href="/single/{{ $property->id }}/{{ $property->name }}">
                                             @if($property->location)
                                                 {{$property->location->name}}
                                             @endif
                                             </a></h3>
+=======
+                                        <p>property description </p>
+>>>>>>> ea1bb8964aa89496ae76cd48194c23d98b963def
                                         <a href="/single/{{ $property->id }}/{{ $property->name }}" class="btn3">View</a>
                                         <p class="price">Ksh{{$property->price}}/=</p>
                                     </div>
@@ -137,7 +150,7 @@
     <div class="news-section" id="news">
         <div class="container">
             <div class="news-section-head text-center">
-                <h3>STILL WONDERING WHERE TO BUY CLOTHING?</h3>
+                <h3>LATEST HOUSES</h3>
                 <p>Here, there and everywhere... what we've been doing</p>
             </div>
             <div class="news-section-grids">
@@ -190,7 +203,7 @@
     <!-- Stats -->
     <div class="stats">
         <div class="container">
-            <p class="slideanim">Link2hao has impacted greately to make people's work easier. We have done it, and we are still working even harder to satisfy all your technology needs.</p>
+            <p class="slideanim">Link2hao has impacted greately to make people's work easier. We have done it, and we are still working even harder to satisfy all your Housing needs.</p>
             <div class="stats-info">
                 <div class="col-md-3 col-sm-3 stats-grid slideanim">
                     <i class="fa fa-smile-o"></i>
