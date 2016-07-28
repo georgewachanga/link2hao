@@ -16,10 +16,10 @@
     <!--footer section end-->
 </section>
 
-<script src="admin/js/jquery.nicescroll.js"></script>
-<script src="admin/js/scripts.js"></script>
+<script src="/admin/js/jquery.nicescroll.js"></script>
+<script src="/admin/js/scripts.js"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="admin/js/bootstrap.min.js"></script>
+<script src="/admin/js/bootstrap.min.js"></script>
 </body>
 </html>
 

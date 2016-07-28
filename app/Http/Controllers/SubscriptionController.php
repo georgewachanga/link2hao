@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
+use App\Subscription;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use Illuminate\Support\Facades\App;
 
-class CategoryController extends Controller
+class SubscriptionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +16,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories=Category::all();
-        return view('admin.category.index',['categories'=>$categories]);
+        //
     }
 
     /**
@@ -28,29 +26,27 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.category.create');
+        //
     }
 
     /**
      * Store a newly created resource in storage.
-     *
+
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
 
-        $category = new  Category([
-                'name' => $request->name
+        $subscription=new Subscription([
+            'email'=>$request->email
 
-            ]
-        );
+        ]);
+        $subscription->save();
+        return redirect('/');
+    }
 
-
-
-        $category->save();
-
-    }  /**
+    /**
      * Display the specified resource.
      *
      * @param  int  $id

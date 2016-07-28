@@ -6,7 +6,7 @@
             <p>We welcome any questions, suggestions, inquiries or complaints from anyone. We value and appreciate feedback from our customers and the public.</p>
         </div>
         <div class="col-md-3 appointment-right">
-            <a href="#" class="btn btn-default btn-default_2 pull-left" data-toggle="modal" data-target="#applyModal_1">Submit</a>
+            <a href="#" class="btn btn-default btn-default_2 pull-left" data-toggle="modal" data-target="#applyModal_1">Submit Feedback</a>
             <div class="modal fade" id="applyModal_1" tabindex="-1" role="dialog" aria-labelledby="applyModalLabel" aria-hidden="true">
                 <div class="modal-dialog dialog_3">
                     <div class="modal-content">
@@ -22,6 +22,7 @@
                                 <input type="text" name="name" id="name" placeholder="Name" required="">
                                 <input type="text" name="email id" id="Email id" placeholder="Email id" required="">
                                 <input type="text" name="mobile number" id="Mobile Number" placeholder="Mobile Number" required="">
+                                <input type="text" name="image" id="Mobile Number" placeholder="profile image" required="">
                                 <textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Message...';}" required="">Enter Message...</textarea>
                                 <input type="submit" onclick="myFunction()" value="Submit Now">
                             </form>

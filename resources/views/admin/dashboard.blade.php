@@ -216,7 +216,7 @@
             <div class="col_1">
                 <div class="col-md-4 span_8">
                     <div class="activity_box">
-                        <h3>Inbox</h3>
+                        <h3>Mail Inbox</h3>
                         <div class="scrollbar scrollbar1" id="style-2">
                             <div class="activity-row">
                                 <div class="col-xs-3 activity-img"><img src='images/1.png' class="img-responsive" alt=""/></div>
@@ -268,7 +268,7 @@
                 </div>
                 <div class="col-md-4 span_8">
                     <div class="activity_box activity_box1">
-                        <h3>chat</h3>
+                        <h3>MESSAGES</h3>
                         <div class="scrollbar" id="style-2">
                             <div class="activity-row activity-row1">
                                 <div class="col-xs-3 activity-img"><img src='images/1.png' class="img-responsive" alt=""/><span>10:00 PM</span></div>
@@ -323,7 +323,7 @@
                 </div>
                 <div class="col-md-4 span_8">
                     <div class="activity_box activity_box2">
-                        <h3>todo</h3>
+                        <h3>FEEDBACKS</h3>
                         <div class="scrollbar" id="style-2">
                             <div class="activity-row activity-row1">
                                 <div class="single-bottom">

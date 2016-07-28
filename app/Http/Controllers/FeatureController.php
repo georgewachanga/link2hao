@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
+use App\Feature;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use Illuminate\Support\Facades\App;
 
-class CategoryController extends Controller
+class FeatureController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +16,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories=Category::all();
-        return view('admin.category.index',['categories'=>$categories]);
+        $features=Feature::all();
+        return view('admin.features.index',['features'=>$features]);
     }
 
     /**
@@ -28,7 +27,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.category.create');
+        return view('admin.features.create');
     }
 
     /**
@@ -39,18 +38,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        //
+    }
 
-        $category = new  Category([
-                'name' => $request->name
-
-            ]
-        );
-
-
-
-        $category->save();
-
-    }  /**
+    /**
      * Display the specified resource.
      *
      * @param  int  $id

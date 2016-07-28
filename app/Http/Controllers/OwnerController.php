@@ -17,7 +17,8 @@ class OwnerController extends Controller
      */
     public function index()
     {
-        return view('admin.owners.index');
+        $owners=Owner::all();
+        return view('admin.owners.index',['owners'=>$owners]);
     }
 
     /**

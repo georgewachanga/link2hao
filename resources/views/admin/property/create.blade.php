@@ -1,8 +1,8 @@
-@extends('layout.master')
+@extends('layout.admin')
 @section('content')
-    <div>
+    <div class="col-md-6">
 
-        <div>
+        <div class="adminn">
 
             {!! Form::open(array('route' => 'property.store', 'method' => 'POST', 'files' => true )) !!}
 

@@ -27,27 +27,7 @@
                                 <li>Available jobs</li>
                                 <li>Recent Openings</li>
                             </ul>
-                            <div class="resp-tabs-container hor_1">
-                                <div>
-                                    @foreach($careers as $career)
-                                    <div class="tab_grid">
 
-                                        <div class="jobs-item with-thumb">
-                                            <div class="jobs_right">
-
-                                                <div class="date">{{ $career->created_at->format('d') }} <span>{{ substr($career->created_at->format('F'),0,3)}}</span></div>
-                                                <div class="date_desc"><h6 class="title"><a href="view_job">{{ $career->name }}</a></h6>
-                                                    <span class="meta">{{ $career->location }}</span>
-                                                </div>
-                                                <div class="clearfix"> </div>
-                                                <p class="description">{{ $career->description }}.  <a href="{{ $career->getUrl() }}" class="read-more">Read More</a></p>
-                                            </div>
-                                            <div class="clearfix"> </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                    </div>
-                            </div>
                         </div>
                     </div>
                 </div>

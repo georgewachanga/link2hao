@@ -24,7 +24,8 @@
         <h3 class="last-updated">REGISTRATION FORM</h3>
         <div class="text-booking-form">
             <div class="col-md-6 text-booking-form-left">
-                <form>
+                <form method="POST" action="">
+                    {!! csrf_field() !!}
                     <label>First Name <span>*</span></label>
                     <input type="text" class="phone" placeholder="">
                     <div class="clearfix"></div>
