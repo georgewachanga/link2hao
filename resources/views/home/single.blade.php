@@ -83,20 +83,10 @@
                 </ul>
             </div>
             <div >
-<<<<<<< HEAD
            <a href="/info"><input type="button" class="btn btn-success" value="CLICK TO RESERVE NOW FOR ONLY KSH 100/="> </a>
 
 <a href="/info"> click 2 book</a>
 
-=======
-
-           <a href="/info"><input type="button" class="btn btn-success" value="CLICK TO RESERVE NOW FOR ONLY KSH 100/="> </a>
-
-
-<a href="/info"> click 2 book</a>
-
-
->>>>>>> 94275955ad84a05fbf0fae812aea78bce47d9adf
             </div>
 
         </div>

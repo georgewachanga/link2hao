@@ -10,11 +10,6 @@
     @include("partials._slide")
 
 
-
-
-
-
-
 <!--partials.search was here-->
 <div class="container-fluid">
 
@@ -63,13 +58,9 @@
                                                 {{$property->location->name}}
                                             @endif
                                             </a></h3>
-<<<<<<< HEAD
-                                        <p>property description </p>
-=======
 
                                         <p>property description </p>
 
->>>>>>> 94275955ad84a05fbf0fae812aea78bce47d9adf
                                         <a href="/single/{{ $property->id }}/{{ $property->name }}" class="btn3">View</a>
                                         <p class="price">Ksh{{$property->price}}/=</p>
                                     </div>
