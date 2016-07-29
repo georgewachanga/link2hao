@@ -203,7 +203,7 @@ class PagesController extends Controller
         {
             if(!$location)
             {
-                $properties = $category->properties;
+                $properties = $category->properties()->paginate(9);
                 if(!$properties)
                 {
                     $message = "Sorry we could not Find any ".$category->name;
@@ -215,7 +215,7 @@ class PagesController extends Controller
             }
             else
             {
-                $properties = Property::where('location_id', '=', $location->id)->where('category_id', $category->id)->get();
+                $properties = Property::where('location_id', '=', $location->id)->where('category_id', $category->id)->paginate(9);
                 if($properties)
                 {
                     $message = "Available ".$category->name." in ".$location->name;
@@ -229,7 +229,7 @@ class PagesController extends Controller
         }
         elseif($location)
         {
-            $properties = $location->properties;
+            $properties = $location->properties()->paginate(9);
             if($properties)
             {
                 $message = "Houses in ".$location->name;

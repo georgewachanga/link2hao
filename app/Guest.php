@@ -4,12 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Owner extends Model
+class Guest extends Model
 {
-
     public function users()
     {
-        return $this->morphOne('App\User', 'user');
+        return $this->morphOne('App\User','user');
     }
-
 }

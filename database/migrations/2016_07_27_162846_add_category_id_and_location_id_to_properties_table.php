@@ -30,9 +30,9 @@ class AddCategoryIdAndLocationIdToPropertiesTable extends Migration
     public function down()
     {
         Schema::table('properties', function (Blueprint $table) {
-            $table->dropForeign('category_id');
+            $table->dropForeign('properties_category_id_foreign');
             $table->dropColumn('category_id');
-            $table->dropForeign('location_id');
+            $table->dropForeign('properties_location_id_foreign');
             $table->dropColumn('location_id');
         });
     }
