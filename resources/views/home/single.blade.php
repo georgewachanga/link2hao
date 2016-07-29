@@ -83,10 +83,20 @@
                 </ul>
             </div>
             <div >
+<<<<<<< HEAD
            <a href="/info"><input type="button" class="btn btn-success" value="CLICK TO RESERVE NOW FOR ONLY KSH 100/="> </a>
 
 <a href="/info"> click 2 book</a>
 
+=======
+
+           <a href="/info"><input type="button" class="btn btn-success" value="CLICK TO RESERVE NOW FOR ONLY KSH 100/="> </a>
+
+
+<a href="/info"> click 2 book</a>
+
+
+>>>>>>> 94275955ad84a05fbf0fae812aea78bce47d9adf
             </div>
 
         </div>
@@ -94,30 +104,22 @@
 
 
         <div class=" single-profile">
-            <h4>RELATED PROPERTIES</h4>
-            <div class="single-left ">
-                <div class="col-md-3 post-top">
-                    <img class="img-responsive " src="/imported/images/s1.jpg" alt="">
-                    <h6>NAME</h6>
-                    <p>Lorem ipsum dolor sit amet.</p>
+            @if($related)
+                <h4>RELATED PROPERTIES</h4>
+                <div class="single-left ">
+
+                        @foreach($related as $related_item)
+                            <div class="col-md-3 post-top">
+                                <img class="img-responsive " src="/imported/images/s1.jpg" alt="">
+                                <h6>{{ $related_item->name }}</h6>
+                                <p>{{ $related_item->description }}</p>
+                            </div>
+                        @endforeach
+                    <div class="clearfix"> </div>
                 </div>
-                <div class="col-md-3 post-top">
-                    <img class="img-responsive " src="/imported/images/s2.jpg" alt="">
-                    <h6>NAME</h6>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="col-md-3 post-top">
-                    <img class="img-responsive " src="/imported/images/s3.jpg" alt="">
-                    <h6>NAME</h6>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="col-md-3 post-top">
-                    <img class="img-responsive " src="/imported/images/s4.jpg" alt="">
-                    <h6>NAME</h6>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
+            @else
+                <h4>THERE ARE NO RELATED PROPERTIES</h4>
+            @endif
         </div>
 
     </div>

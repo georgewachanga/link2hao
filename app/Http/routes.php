@@ -53,6 +53,7 @@ Route::group(['middleware' => 'web'],
 
         Route::get('/','PagesController@GetIndex');
         Route::get('consultancy','PagesController@GetConsultancy');
+        Route::get('pay','PagesController@GetPay');
         Route::get('marketing','PagesController@GetMarketing');
         Route::get('graphics','PagesController@GetGraphics');
         Route::get('software','PagesController@GetSoftware');
