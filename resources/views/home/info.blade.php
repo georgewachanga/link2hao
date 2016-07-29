@@ -1,5 +1,5 @@
 @extends("layout.master")
-
+@section("content")
 
 
 
@@ -16,7 +16,7 @@
 </div>
 
 
-@section("content")
+
 
         <!--- Book-a-test ---->
 <div class="test-booking">
