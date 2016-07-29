@@ -15,8 +15,8 @@ class LocationCategoryTablesSeeder extends Seeder
      */
     public function run()
     {
-        Location::truncate();
-        Category::truncate();
+        //Location::truncate();
+        //Category::truncate();
 
 
         $locs = ['Lurambi','Kefinco','Makuti','Muyala','Sichirai','Town','JoyLand','Amalemba'];

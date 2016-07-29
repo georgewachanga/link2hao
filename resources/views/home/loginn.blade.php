@@ -16,7 +16,7 @@
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- //For-Mobile-Apps -->
 
-    <!-- Style.CSS --> <link rel="stylesheet" href="login/css/style.css" type="text/css" media="all" />
+    <!-- Style.CSS --> <link rel="stylesheet" href="/login/css/style.css" type="text/css" media="all" />
 
     <!-- Web-Fonts -->
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
@@ -71,12 +71,29 @@
 
                     <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
                         <!-- Form -->
-                        <form action="#" method="post">
-                            <input type="text" Name="Username" placeholder="Username" required="">
-                            <input type="password" Name="Password" placeholder="Password" required="">
+                        <form action="{{ url('/auth/login') }}" method="POST">
+                            {!! csrf_field() !!}
+
+                            <div class="{{ $errors->has('email') ? 'has-error' : '' }}">
+                                <input class="form-control" type="text" name="email" placeholder="email" value="{{ old('email') }}" required="">
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+                            <div class="{{ $errors->has('password') ? 'has-error' : '' }}">
+                                <input class="form-control" type="password" name="password" placeholder="Password" required="">
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
                             <ul>
                                 <li>
-                                    <input type="checkbox" id="brand1" value="">
+                                    <input type="checkbox" id="brand1" value="" name="remember">
                                     <label for="brand1"><span></span>Remember Me</label>
                                 </li>
                             </ul>
@@ -87,13 +104,72 @@
 
                     <div class="tab-2 resp-tab-content" aria-labelledby="tab_item-2">
                         <div class="register">
-                            <form action="#" method="post">
-                                <input type="text" Name="First Name" placeholder="First Name" required="">
-                                <input type="text" Name="Last Name" placeholder="Last Name" required="">
-                                <input type="text" Name="Email" placeholder="Email" required="">
-                                <input type="password" Name="Password" placeholder="Password" required="">
-                                <input type="password" Name="Password" class="lessgap" placeholder="Confirm Password" required="">
-                                <input type="text" Name="Phone Number" placeholder="Phone Number" required="">
+                            <form action="{{ url('/auth/register') }}" method="POST">
+                                {!! csrf_field() !!}
+
+                                <div class="{{ $errors->has('fname') ? 'has-error' : '' }}">
+                                    <input type="text" name="fname" placeholder="First Name" required="" value="{{ old('fname') }}">
+                                    @if($errors->has('fname'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('fname') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+
+                                <div class="{{ $errors->has('lname') ? 'has-error' : '' }}">
+                                    <input type="text" name="lname" placeholder="Last Name" required="" value="{{ old('lname') }}">
+                                    @if($errors->has('lname'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('lname') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+
+                                <div class="{{ $errors->has('email') ? 'has-error' : "" }}">
+                                    <input type="text" name="email" placeholder="Email" required="" value="{{ old('email') }}">
+                                    @if($errors->has('email'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+
+                                <div class="{{ $errors->has('password') ? 'has-error' : "" }}">
+                                    <input type="password" name="password" placeholder="Password" required="">
+                                    <input type="password" name="password_confirmation" class="lessgap" placeholder="Confirm Password" required="">
+                                    @if($errors->has('password'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+
+                                <div class="{{ $errors->has('password_confirmation') ? 'has-error' : "" }}">
+                                    @if($errors->has('password_confirmation'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+
+                                <div class="{{ $errors->has('phone') ? 'has-error' : "" }}">
+                                    <input type="text" name="phone" placeholder="Mobile Number" required="" value="{{ old('phone') }}">
+                                    @if($errors->has('phone'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('phone') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+
+                                <div class="{{ $errors->has('idno') ? 'has-error' : "" }}">
+                                    <input type="text" name="idno" placeholder="Identification Number" required="" value="{{ old('idno') }}">
+                                    @if($errors->has('idno'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('idno') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+
                                 <div class="send-button">
                                     <input type="submit" value="REGISTER">
                                 </div>
