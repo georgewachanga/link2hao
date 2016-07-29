@@ -29,6 +29,10 @@ class PagesController extends Controller
     {
         return view('home.consultancy');
     }
+    public function getPay()
+    {
+        return view('home.pay');
+    }
     public function getMarket()
     {
         return view('home.market');
@@ -90,7 +94,29 @@ class PagesController extends Controller
     public function getSingle($id)
     {
         $property = Property::findOrFail($id);
-        return view('home.single')->with('property', $property);
+        $cat = $property->category;
+        $loc = $property->location;
+        if($cat)
+        {
+            if($loc)
+            {
+                $related = Property::where('category_id',$property->category->id)->where('location_id',$property->location->id)->get();
+            }
+            else
+            {
+                $related = Property::where('category_id',$property->category->id)->get();
+            }
+        }
+        elseif($loc)
+        {
+            $related = Property::where('category_id',$property->category->id)->get();
+        }
+        else
+        {
+            $related = null;
+        }
+
+        return view('home.single')->with('property', $property)->with('related', $related);
     }
     public function getFaq()
     {
@@ -161,7 +187,8 @@ class PagesController extends Controller
 
     public function getIndex(Request $request)
     {
-        $categories = Category::lists('name', 'id');
+       $categories = Category::lists('name', 'id');
+       // $categories=Category::all();
         $categories->prepend('Category', 0);
         $locations = Location::lists('name', 'id');
         $locations->prepend('Location', 0);
@@ -179,7 +206,7 @@ class PagesController extends Controller
                 $properties = $category->properties;
                 if(!$properties)
                 {
-                    $message = "No Available ".$category->name;
+                    $message = "Sorry we could not Find any ".$category->name;
                 }
                 else
                 {
@@ -215,7 +242,7 @@ class PagesController extends Controller
         }
         else
         {
-            $properties = Property::all();
+            $properties = Property::orderBy('created_at','DESC')->paginate(9);
             if($properties)
             {
                 $message = "Available Houses";
