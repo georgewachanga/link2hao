@@ -16,7 +16,7 @@
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- //For-Mobile-Apps -->
 
-    <!-- Style.CSS --> <link rel="stylesheet" href="/login/css/style.css" type="text/css" media="all" />
+    <!-- Style.CSS --> <link rel="stylesheet" href="/loginn/css/style.css" type="text/css" media="all" />
 
     <!-- Web-Fonts -->
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
@@ -24,8 +24,8 @@
     <!-- //Web-Fonts -->
 
     <!-- Horizontal-Tabs-JavaScript -->
-    <script src="login/js/jquery-1.11.1.min.js"></script>
-    <script src="login/js/easyResponsiveTabs.js" type="text/javascript"></script>
+    <script src="/loginn/js/jquery-1.11.1.min.js"></script>
+    <script src="/loginn/js/easyResponsiveTabs.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#horizontalTab').easyResponsiveTabs({
@@ -60,10 +60,10 @@
             <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 
                 <ul class="resp-tabs-list">
-                    <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><h2><span>LOGIN</span></h2></li>
-                    <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>SIGNUP</span></li>
-                    <li class="resp-tab-item" aria-controls="tab_item-3" role="tab"><span>RESET PASSWORD</span></li>
-                    <li class="resp-tab-item" aria-controls="tab_item-4" role="tab"><span>LOGIN OPTIONS</span></li>
+                    <li id="#1" class="resp-tab-item" aria-controls="tab_item-1" role="tab"><h2><span>LOGIN</span></h2></li>
+                    <li id="#2" class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>SIGNUP</span></li>
+                    <li id="#3" class="resp-tab-item" aria-controls="tab_item-3" role="tab"><span>RESET PASSWORD</span></li>
+                    <li id="#4" class="resp-tab-item" aria-controls="tab_item-4" role="tab"><span>LOGIN OPTIONS</span></li>
                     <div class="clear"> </div>
                 </ul>
 
@@ -71,7 +71,7 @@
 
                     <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
                         <!-- Form -->
-                        <form action="{{ url('/auth/login') }}" method="POST">
+                        <form action="{{ url('/login') }}" method="POST">
                             {!! csrf_field() !!}
 
                             <div class="{{ $errors->has('email') ? 'has-error' : '' }}">
@@ -104,7 +104,7 @@
 
                     <div class="tab-2 resp-tab-content" aria-labelledby="tab_item-2">
                         <div class="register">
-                            <form action="{{ url('/auth/register') }}" method="POST">
+                            <form action="{{ url('/register') }}" method="POST">
                                 {!! csrf_field() !!}
 
                                 <div class="{{ $errors->has('fname') ? 'has-error' : '' }}">
@@ -194,37 +194,37 @@
                             <ul class="cbp-ig-grid">
                                 <li>
                                     <a href="#">
-                                        <img src="login/images/facebook.png" class="cbp-ig-icon cbp-ig-icon-facebook" alt="Fashion">
+                                        <img src="/loginn/images/facebook.png" class="cbp-ig-icon cbp-ig-icon-facebook" alt="Fashion">
                                         <h3 class="cbp-ig-title">Facebook</h3>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="login/images/twitter.png" class="cbp-ig-icon cbp-ig-icon-twitter" alt="Fashion">
+                                        <img src="/loginn/images/twitter.png" class="cbp-ig-icon cbp-ig-icon-twitter" alt="Fashion">
                                         <h3 class="cbp-ig-title">Twitter</h3>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="login/images/gplus.png" class="cbp-ig-icon cbp-ig-icon-gplus" alt="Fashion">
+                                        <img src="/loginn/images/gplus.png" class="cbp-ig-icon cbp-ig-icon-gplus" alt="Fashion">
                                         <h3 class="cbp-ig-title">Google +</h3>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="login/images/pinterest.png" class="cbp-ig-icon cbp-ig-icon-pinterest" alt="Fashion">
+                                        <img src="/loginn/images/pinterest.png" class="cbp-ig-icon cbp-ig-icon-pinterest" alt="Fashion">
                                         <h3 class="cbp-ig-title">Pinterest</h3>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="login/images/tumblr.png" class="cbp-ig-icon cbp-ig-icon-tumblr" alt="Fashion">
+                                        <img src="/loginn/images/tumblr.png" class="cbp-ig-icon cbp-ig-icon-tumblr" alt="Fashion">
                                         <h3 class="cbp-ig-title">Tumblr</h3>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="login/images/linkedin.png" class="cbp-ig-icon cbp-ig-icon-linkedin" alt="Fashion">
+                                        <img src="/loginn/images/linkedin.png" class="cbp-ig-icon cbp-ig-icon-linkedin" alt="Fashion">
                                         <h3 class="cbp-ig-title">Linkedin</h3>
                                     </a>
                                 </li>
@@ -258,6 +258,36 @@
 </div>
 <!-- //Footer -->
 
+<-- //some javascript  by otwani -->
+<script type="text/javascript">
+
+    //after alot of fiddling and failing to understand how easyResponsiveTabs.js works
+    //I decided to do stuff the oldschool way, click 'em up and let things roll.
+
+    $(document).ready(function(){
+
+                //get the current pathname of object
+                var page_name = window.location.pathname;
+
+                if(page_name == '/login')
+                {
+                    document.getElementById("#1").click();
+                }
+                else if( page_name == '/register')
+                {
+                    document.getElementById("#2").click();
+                }
+                else if( page_name == '/reset')
+                {
+                    document.getElementById("#3").click();
+                }
+            }
+
+    );
+
+
+
+</script>
 
 
 </body>

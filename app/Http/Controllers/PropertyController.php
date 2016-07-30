@@ -8,6 +8,7 @@ use App\Image;
 use App\Property;
 use App\Location;
 use Illuminate\Http\Request;
+use Gate;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\App;
@@ -19,6 +20,11 @@ class PropertyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->authorize('admin');
+    }
     public function index()
     {
 

@@ -46,7 +46,11 @@ class User extends Authenticatable
         }
         else if($this->isGuest())
         {
-            return guest::find($this->user_id);
+            return Guest::find($this->user_id);
+        }
+        elseif($this->isAdmin())
+        {
+            return Admin::find($this->user_id);
         }
         else {
             return null;
@@ -55,6 +59,13 @@ class User extends Authenticatable
 
     public function isGuest(){
         if($this->user_type == 'App\\Guest'){
+            return true;
+        }
+        return false;
+    }
+
+    public function isAdmin(){
+        if($this->user_type == 'App\\Admin'){
             return true;
         }
         return false;
