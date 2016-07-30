@@ -2,7 +2,8 @@
 @section("title", "market")
 @section("content")
 
-    <div>
-<div>HERE YOU CAN SELL YOUR HOUSING PRODUCTS LIKE MATTRESSES, BEDDINGS, WARDROBES, ETC</div>
+    <div class="container">
+<h2>SOON WE ARE SETTING UP AN ONLINE MARKET WHERE YOU CAN SELL AND PURCHASE GOODS ONLINE</h2>
+        <p>Only here at Link2hao.com</p>
     </div>
     @endsection

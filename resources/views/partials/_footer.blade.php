@@ -4,7 +4,9 @@
         <div class="container">
             <div class="col-md-3 footer one">
                 <h3>About Company</h3>
-                <p> Link2hao is a real estate advertising agengy that deals in.</p>
+                <p> Getting a roof over your head has never been easy as we have made it now.You can now find and reserve a houseat the comfort of wherever you are and at
+                    the convenience of your time. No more worry, No more fear, no more unwanted expenses. Thanks to Link2hao!!"
+                </p>
                 <p class="adam">- George Wachanga, CEO</p>
                 <div class="clear"></div>
             </div>

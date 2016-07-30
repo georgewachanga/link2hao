@@ -138,6 +138,12 @@ class PagesController extends Controller
     }
 
 
+    public function getCareer()
+    {
+        return view('home..career');
+    }
+
+
     public function getNews()
     {
         return view('home.news');
@@ -169,6 +175,9 @@ class PagesController extends Controller
     {
         return view('admin.inbox');
     }
+
+
+
     public function getMedia()
     {
         return view('admin.media');

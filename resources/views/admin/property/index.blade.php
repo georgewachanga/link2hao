@@ -30,8 +30,8 @@
                             <tr>
                                 <th scope="row">{{$property->id}}</th>
                                 <td>{{$property->name}}</td>
-                                <td>{{$property->category}}</td>
-                                <td>{{$property->location}}</td>
+                                <td>{{$property->category->name}}</td>
+                                <td>{{$property->location->name}}</td>
                                 <td>{{$property->price}}</td>
                                 <td>{{$property->description}}</td>
                                 <td>{{$property->ownerIdNo}}</td>

@@ -16,8 +16,8 @@
     </header>
     <div id="breadcrumb_wrapper">
         <div class="container">
-            <h2>Booking and reservation for Ksh 100/=</h2>
-            <h6>Trusted</h6>
+            <h2>Link2hao has made house searching work easier</h2>
+            <h6>Refer your friends to Link2hao that they too may enjot the benefit</h6>
         </div>
     </div>
 </div>
@@ -67,7 +67,7 @@
         </div>
         <div class="col-md-3 categories-grid">
             <div class="grid-categories">
-                <h4>We offer...</h4>
+                <h4>Our Facilities</h4>
                 <ul class="popular ">
                     @foreach($property->features as $feature)
                         <li><a href="#"><i class="glyphicon glyphicon-ok"> </i>{{ $feature->name }}</a></li>

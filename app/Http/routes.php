@@ -35,11 +35,7 @@ Route::group(['middleware' => 'web'],
     Route::get('about', function () {
         return view('home.about');
     });
-    Route::get('career', function () {
-        $careers = App\Career::get();
 
-        return view('home.career')->withCareers($careers);
-    });
 
         Route::resource('location','LocationController');
         Route::resource('category','CategoryController');
@@ -74,6 +70,7 @@ Route::group(['middleware' => 'web'],
         Route::get('advertise','PagesController@GetAdvertise');
         Route::get('news','PagesController@GetNews');
         Route::get('slide','PagesController@GetSlide');
+        Route::get('career','PagesController@GetCareer');
 
         Route::post('search', 'PagesController@getIndex');
 
@@ -86,10 +83,6 @@ Route::group(['middleware' => 'web'],
 
 
 
-        Route::get('career', function() {
-
-        return view('home.view-job');
-    });
 });
 
 
