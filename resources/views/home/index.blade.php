@@ -16,12 +16,62 @@
     <div class="row">
 
         <div class="col-md-3 timing">
+            <p>advertising section here</p>
 
-
-<div>adverts here</div>
-
+                        <!--div class="social-widget">
+                            <h2>Connect with us</h2>
+                            <ul class="courses_social">
+                                <li class="facebook-icon">
+                                    <div>
+                                        <a href="#" class="fa fa-facebook"></a>
+                                        <p>2154</p>
+                                    </div>
+                                </li>
+                                <li class="twitter-icon">
+                                    <div>
+                                        <a href="#" class="fa fa-twitter"></a>
+                                        <p>1425</p>
+                                    </div>
+                                </li>
+                                <li class="gplus-icon">
+                                    <div>
+                                        <a href="#" class="fa fa-google-plus"></a>
+                                        <p>2150</p>
+                                    </div>
+                                </li>
+                                <div class="clearfix"> </div>
+                            </ul>
+                        </div-->
+                        <!--section class="slider">
+                            <h3>Testimonial</h3>
+                            <div class="flexslider">
+                                <ul class="slides">
+                                    <li>
+                                        <div class="banner-info1">
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat quis nostrud.</p>
+                                            <h5><a href="#">Laoreet ,</a>Dateratr since 2015</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="banner-info1">
+                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, content of a page.</p>
+                                            <h5><a href="#">Distracted ,</a>Dateratr since 2015</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="banner-info1">
+                                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of usin but the majority.</p>
+                                            <h5><a href="#">Suffered ,</a>Dateratr since 2015</h5>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section--->
 
         </div>
+
+
+
 
 
         <div><h1 style="text-align: center">{{ strtoupper($message) }}</h1></div>
@@ -98,7 +148,7 @@
 
                 </div>
 
-                {!! $properties->render() !!}
+
             </div>
 
 
@@ -153,7 +203,7 @@
 
 
 
-<div class="living_bottom">
+<!--div class="living_bottom">
         <div class="container">
             <h2 class="title block-title">LATEST HOUSES</h2>
             <div class="col-md-6 post_left wow fadeInLeft" data-wow-delay="0.4s">
@@ -169,7 +219,7 @@
                 <p class="field-content">30 Sep 2015</span></p>
             </div>
         </div>
-    </div>
+    </div-->
 
 
 
@@ -200,22 +250,22 @@
             <div class="stats-info">
                 <div class="col-md-3 col-sm-3 stats-grid slideanim">
                     <i class="fa fa-smile-o"></i>
-                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='18000' data-delay='.5' data-increment="10">18000</div>
+                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='100' data-delay='.5' data-increment="10">18000</div>
                     <p class="stats-info">Happy Smiles</p>
                 </div>
                 <div class="col-md-3 col-sm-3 stats-grid slideanim">
                     <i class="fa fa-facebook"></i>
-                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='1700' data-delay='.5' data-increment="1">17000</div>
+                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='179' data-delay='.5' data-increment="1">17000</div>
                     <p class="stats-info">Facebook Likes</p>
                 </div>
                 <div class="col-md-3 col-sm-3 stats-grid slideanim">
                     <i class="fa fa-twitter"></i>
-                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='21500' data-delay='.5' data-increment="1">21500</div>
+                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='27' data-delay='.5' data-increment="1">21500</div>
                     <p class="stats-info">Twitter Followers</p>
                 </div>
                 <div class="col-md-3 col-sm-3 stats-grid slideanim">
                     <i class="fa fa-flask"></i>
-                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='28551' data-delay='.5' data-increment="1">20500</div>
+                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='51' data-delay='.5' data-increment="1">20500</div>
                     <p class="stats-info">Subscriptions</p>
                 </div>
                 <div class="clearfix"></div>

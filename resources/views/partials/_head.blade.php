@@ -5,7 +5,9 @@
     <title>Link2hao  | @yield("title")</title>
     <link href="/css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
+    <link href="/css/flexslider.css" rel='stylesheet' type='text/css' />
     <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/easy-responsive-tabs.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/css/gallery.css" rel="stylesheet" type="text/css" media="all" /> <!-- gallery css -->
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">

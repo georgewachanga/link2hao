@@ -5,8 +5,8 @@
         <li><a class="active" href="/">Home</a></li>
         <li><a href="/about">About us</a></li>
         <li><a href="/services">Services</a></li>
-        <li><a href="/advert">Advertising</a></li>
-        <li><a href="/consultancy">Concultancy</a></li>
+        <!--li><a href="/advert">Advertising</a></li-->
+        <li><a href="/consultancy">Consultancy</a></li>
         <li><a href="/career">Jobs</a></li>
         <li><a href="/news">News</a></li>
         <li><a href="/faq">FAQ</a></li>

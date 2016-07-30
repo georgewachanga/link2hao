@@ -36,11 +36,11 @@
                             </div>
                             <div class="ser-info">
                                 <h3>want to advertise</h3>
-                                <p>Struggle no more ...free of charge
+                                <p><h4>Advertise all your products at Link2hao Free of charge!!!
+                                    This offer runs until December 2016 after which charger will start to apply</h4>
                                 </p>
-                                <p>Keep in touch with Link2hao.. Yes we have what it takes!!!
-                                </p>
-                                <a href="#">Read More</a>
+
+                                <!--a href="#">Read More</a-->
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -55,8 +55,10 @@
                                 <h3>Want to book</h3>
                                 <p> booking is free of charge yees!!
                                 </p>
+                                <p> To book online, Contact 0702452640 for more details
+                                </p>
 
-                                <a href="#">Read More</a>
+                                <!--a href="#">Read More</a-->
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -70,9 +72,9 @@
                             </div>
                             <div class="ser-info">
                                 <h3>want to reserve?</h3>
-                                <p>then go ahead!!
+                                <p>then go ahead!! Do it
                                 </p>
-                                <a href="#">Read More</a>
+                                <!--a href="#">Read More</a-->
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -84,9 +86,9 @@
                             </div>
                             <div class="ser-info">
                                 <h3>want to  consult</h3>
-                                <p>The platform is open for you...simply amazing
+                                <p>The platform is open for you...simply amazing give us  a call!!
                                 </p>
-                                <a href="consultancy">Read More</a>
+                                <a href="/consultancy">Read More</a>
                             </div>
                             <div class="clearfix"></div>
                         </div>

@@ -100,10 +100,11 @@
         <!--banner-info-->
         <div class="banner-info">
             <h1><a href="/"><span class="logo-sub">www.</span> Link2hao <span class="logo-sub">.com</span> </a></h1>
-            <h2><span>FIND LISTED  </span> <span>HOUSES FOR MMUST STUDENTS AROUND KAKAMEGA</span></h2>
-            <p>Because Housing matters</p>
+            <h2><span>FIND AVAILABLE</span> <span>HOUSES FOR RENTING NEAR YOU AND BOOK ONLINE</span></h2>
+            <p>Type category and Location to search for a house.</p>
             {!! Form::open(array('url' => '/search', 'method' => 'POST' )) !!}
                 <div class="search-two">
+                    <!--search image icons on line 239 in zoomslider-->
                     {{Form::select('category', $categories, null, array('class'=>'frm-field required', 'id' => 'country', 'onchange' => 'change_country(this.value)'))}}
                 </div>
                 <div class="section_room">
@@ -113,6 +114,7 @@
                 <input type="submit" value="Find House">
                 <div class="clearfix"></div>
             {{ Form::close() }}
+            <p>Because Housing matters</p>
         </div>
         <!--//banner-info-->
     </div>
