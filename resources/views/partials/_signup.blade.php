@@ -11,22 +11,17 @@
             <div class="modal-body about">
                 <div class="login-top sign-top one">
                     <form action="#" method="post">
-                        <input type="text" name="name" class="name active" placeholder="First Name" required="">
-                        <input type="text" name="name" class="name active" placeholder="Last Name" required="">
+                        <input type="text" name="fname" class="name active" placeholder="First Name" required="">
+                        <input type="text" name="lname" class="name active" placeholder="Last Name" required="">
                         <input type="text" name="phone" class="phone" placeholder="Phone No." required="">
                         <input type="text" name="phone" class="phone" placeholder="National ID No." required="">
+                        <input type="text" name="password" class="phone" placeholder="Password" required="">
+                        <input type="text" name="password_confirmation" class="phone" placeholder="Confirm Password" required="">
                         <input type="text" name="email" class="email" placeholder="Email" required="">
-                        <input type="text" name="email" class="email" placeholder="Town" required="">
-                        <input type="text" name="phone" class="phone" placeholder="Password" required="">
-                        <input type="text" name="phone" class="phone" placeholder="Confirm Password" required="">
-                        <input type="password" name="password" class="password" placeholder="Password" required="">
                         <input type="checkbox" id="brand1" value="">
                         <label for="brand1"><span></span> Remember me?</label>
                         <div class="login-bottom one">
                             <ul>
-                                <li>
-                                    <a href="#">Forgot password?</a>
-                                </li>
                                 <li>
 
                                     <input type="submit" value="SIGN UP">

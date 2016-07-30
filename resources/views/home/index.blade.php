@@ -40,8 +40,12 @@
                                 <div class="living_box">
                                     <a href="/single/{{ $property->id }}/{{ $property->name }}">
                                     <a href="single/{{ $property->id }}/{{ $property->name }}">
-                                        <img src="/imported/{{ $property->imagepath }}" class="img-responsive" alt=""/>
-                                        <span class="sale-box">
+                                        @if($property->images()->first())
+                                            <img src="/uploads/{{ $property->images()->first()->name }}" class="img-responsive" alt=""/>
+                                        @else
+                                            <img src="/uploads/{{ $property->images }}" class="img-responsive" alt=""/>
+                                        @endif
+                                            <span class="sale-box">
 				                             <span class="sale-label">
                                                  @if($property->category)
                                                     {{$property->category->name}}

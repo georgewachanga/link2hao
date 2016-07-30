@@ -1,5 +1,5 @@
 <!--/banner-section-->
-<div id="demo-1" data-zs-src='["images/2.jpg", "images/1.jpg", "images/3.jpg"]' data-zs-overlay="dots">
+<div id="demo-1" data-zs-src='["/images/2.jpg", "/images/1.jpg", "/images/3.jpg"]' data-zs-overlay="dots">
     <div class="demo-inner-content">
 
 
@@ -33,7 +33,7 @@
                         <a href="#" data-toggle="modal" data-target="#myModal4"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Select Your Location</a></li>
 
                     <li><button id="showRight" class="navig">Login </button>
-                        <div class="cbp-spmenu-push">
+                        <!-- <div class="cbp-spmenu-push">
                             <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
                                 <h3>Login</h3>
                                 <div class="login-inner">
@@ -70,7 +70,7 @@
                                 </div>
                             </nav>
                         </div>
-                        <script src="slider/js/classie2.js"></script>
+                        <script src="/slider/js/classie2.js"></script>
                         <script>
                             var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
                                     showRight = document.getElementById( 'showRight' ),
@@ -112,7 +112,7 @@
 
                 <input type="submit" value="Find House">
                 <div class="clearfix"></div>
-            {{ Form::close() }}
+              {{ Form::close() }}
         </div>
         <!--//banner-info-->
     </div>
@@ -213,29 +213,15 @@
             <div class="modal-header one">
                 <button type="button" class="close sg" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div class="discount one">
-                    <h3>Please Tell Us Your City</h3>
+                    <h3>Where do you stay</h3>
 
                 </div>
             </div>
             <div class="modal-body about">
                 <div class="login-top sign-top location">
                     <form action="#" method="post">
-                        <select id="country12" onchange="change_country(this.value)" class="frm-field required">
-                            <option value="null"> Select City</option>
-                            <option value="city">Amsterdam</option>
-                            <option value="city">Bahrain</option>
-                            <option value="city">Cannes</option>
-                            <option value="city">Dublin</option>
-                            <option value="city">Edinburgh</option>
-                            <option value="city">Florence</option>
-                            <option value="city">Georgia</option>
-                            <option value="city">Hungary</option>
-                            <option value="city">Hong Kong</option>
-                            <option value="city">Johannesburg</option>
-                            <option value="city">Kiev</option>
-                            <option value="city">London</option>
-                            <option value="city">Others...</option>
-                        </select>
+                        {{Form::select('mylocation', $locations, null, array('class'=>'frm-field required', 'id' => 'country12', 'onchange' => 'change_country(this.value)'))}}
+
                     </form>
                 </div>
 
@@ -250,8 +236,8 @@
 <!--//banner-section-->
 
 
-<script src="slider/js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="slider/js/jquery.zoomslider.min.js"></script>
+<script src="/slider/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/slider/js/jquery.zoomslider.min.js"></script>
 <script type="text/javascript">
     $(window).load(function() {
         $("#flexiselDemo").flexisel({
@@ -304,5 +290,5 @@
         });
     });
 </script>
-<script type="text/javascript" src="slider/js/jquery.flexisel.js"></script>
-<script src="slider/js/bootstrap.js"></script>
+<script type="text/javascript" src="/slider/js/jquery.flexisel.js"></script>
+<script src="/slider/js/bootstrap.js"></script>

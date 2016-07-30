@@ -15,14 +15,17 @@
 
             <div class="sl-slider">
 
+                @foreach($property->images as $image)
                 <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
                     <div class="sl-slide-inner">
-                        <div><img class="img-responsive " src="/imported/images/2.jpg" alt=""></div>
+                        <div><img class="img-responsive " src="/uploads/{{ $image->name }}" alt=""></div>
 
                     </div>
                 </div>
+                @endforeach
 
-                <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+                <!--
+                    <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
                     <div class="sl-slide-inner">
                         <div><img class="img-responsive " src="/imported/images/1.jpg" alt=""></div>
                          </div>
@@ -44,7 +47,7 @@
                     <div class="sl-slide-inner">
                         <div><img class="img-responsive " src="/imported/images/3.jpg" alt=""></div>
                         </div>
-                </div>
+                </div>-->
             </div><!-- /sl-slider -->
 
             <nav id="nav-dots" class="nav-dots">

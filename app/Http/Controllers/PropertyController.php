@@ -23,7 +23,7 @@ class PropertyController extends Controller
 
     public function __construct()
     {
-        $this->authorize('admin');
+        $this->authorize( 'admin');
     }
     public function index()
     {
@@ -61,17 +61,21 @@ class PropertyController extends Controller
      */
     public function store(Request $request)
     {
+
         $property= new Property([
             'name'=> $request->name,
-            'category'=>$request->category,
-            'location'=>$request->location,
             'description'=>$request->description,
             'price'=>$request->price,
             'ownerIdNo'=>$request->ownerIdNo,
-
         ]);
         $property->save();
         $property->features()->attach($request->features);
+
+        $cat = Category::find($request->category);
+        $loc = Location::find($request->location);
+
+        $cat->properties()->save($property);
+        $loc->properties()->save($property);
 
 
         /**
@@ -105,7 +109,7 @@ class PropertyController extends Controller
          * image logic
          */
 
-        return redirect('property/show')->with('id', $property->id);
+        return redirect('property')->with('id', $property->id);
 
     }
 
@@ -118,6 +122,7 @@ class PropertyController extends Controller
     public function show($id)
     {
         $property = Property::findOrFail($id);
+
         return view('admin.property.show')->with('property',$property);
     }
 
@@ -155,9 +160,45 @@ class PropertyController extends Controller
         //
     }
 
-    public function addFeatures(Request $request)
+    public function createImages($id)
+    {
+        $property = Property::findOrFail($id);
+        if($property){
+            return view('admin.property.create_images',['property', $property]);
+        }
+
+    }
+
+    public function storeImages(Request $request)
     {
 
+        $property = Property::findOrFail($request->id);
+
+        if(!$property)
+        {
+            return Response::json('error, property does not exist!!', 400);
+        }
+
+        $image = $request->file('file');
+        if($image != null)
+        {
+            $image_name = 'link2hao_'.$property->id.'_'.time().'.'.$image->getClientOriginalExtension();
+            $counter = 1;
+            while(file_exists(public_path().'/uploads/'.$image_name))
+            {
+                $image_name = 'link2hao_'.$property->id.'_'.time().'_'.$counter.'.'.$image->getClientOriginalExtension();
+                $counter ++;
+            }
+            $image->move(public_path().'/uploads/', $image_name);
+            $image = new Image(['name' => $image_name]);
+            $property->images()->save($image);
+
+            return Response::json('success', 200);
+
+        }
+        else{
+            return Response::json('error, unable to upload', 400);
+        }
     }
 
 }

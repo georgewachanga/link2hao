@@ -122,3 +122,6 @@ Route::get('widgets','PagesController@GetWidgets');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/property/{id}/createImages', 'PropertyController@createImages');
+Route::post('/storeImage', 'PropertyController@storeImages');

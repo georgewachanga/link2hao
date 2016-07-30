@@ -1,5 +1,6 @@
 @extends("layout.master")
 
+@section('title','404')
 @section("content")
 
         <!-- 404-section -->
