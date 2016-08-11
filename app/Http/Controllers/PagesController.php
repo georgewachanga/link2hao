@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Property;
 use App\Category;
 use App\Location;
+use App\Member;
+use Illuminate\Cookie\CookieJar;
+use Cookie;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -13,6 +16,11 @@ class PagesController extends Controller
 {
 
     //frontend routes
+
+    public function __construct()
+    {
+
+    }
     /**
     public function getIndex()
     {
@@ -195,10 +203,26 @@ class PagesController extends Controller
         return view('admin.compose');
     }
 
-    public function getIndex(Request $request)
+    public function getIndex( Request $request)
     {
-       $categories = Category::lists('name', 'id');
-       // $categories=Category::all();
+        if($request->cookie('member'))
+        {
+            dd($request->cookie('member'));
+            $member_id = $request->cookie('member');
+            $member = Member::find($member_id);
+            $member->addVisit(); //profile individual guest
+        }
+        else
+        {
+            $member = Member::create();
+            $member->addVisit();
+            $member_id = $member->id;
+        }
+
+        Member::first()->addVisit(); //use first item in table to track total number of visits
+        $cookie = Cookie::forever('member',$member_id);//profile member on consecutive visits
+
+        $categories = Category::lists('name', 'id');
         $categories->prepend('Category', 0);
         $locations = Location::lists('name', 'id');
         $locations->prepend('Location', 0);
@@ -264,7 +288,7 @@ class PagesController extends Controller
 
         }
 
-        return view('home.index', ['properties'=>$properties, 'categories' => $categories, 'locations' => $locations, 'message' => $message]);
+        return view('home.index', ['properties'=>$properties, 'categories' => $categories, 'locations' => $locations, 'message' => $message])->withCookie($cookie);
     }
 
 

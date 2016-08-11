@@ -67,6 +67,7 @@ class PropertyController extends Controller
             'description'=>$request->description,
             'price'=>$request->price,
             'ownerIdNo'=>$request->ownerIdNo,
+            'units' => $request->units
         ]);
         $property->save();
         $property->features()->attach($request->features);

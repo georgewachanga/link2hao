@@ -32,6 +32,9 @@
             {{Form::label('ownerIdNo', 'owner id no') }}
             {{Form::text('ownerIdNo', null, array('class'=>'form-control'))}}
 
+            {{Form::label('units', 'number of units available') }}
+            {{Form::text('units', null, array('class'=>'form-control'))}}
+
             {!! Form::label('profile images') !!}
             {!! Form::file('images[]',array('multiple'=>true, 'id' => 'images_holder')) !!}
             <button type="button" onclick="add_more()" class="btn btn-default">Add more</button>

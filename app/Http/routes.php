@@ -118,3 +118,6 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/property/{id}/createImages', 'PropertyController@createImages');
 Route::post('/storeImage', 'PropertyController@storeImages');
+
+Route::get('/booking/{id}/{name}', 'BookingController@getIndex');
+Route::post('/booking/accept-terms', 'BookingController@confirmTerms');

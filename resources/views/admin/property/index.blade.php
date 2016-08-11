@@ -22,6 +22,7 @@
                                 <th>PRICE</th>
                                 <th>DESCRIPTION</th>
                                 <th>OWNER ID</th>
+                                <th>UNITS EMPTY</th>
                                 <th>ACTION</th>
                             </tr>
                             </thead>
@@ -30,11 +31,12 @@
                             <tr>
                                 <th scope="row">{{$property->id}}</th>
                                 <td>{{$property->name}}</td>
-                                <td>{{$property->category->name}}</td>
-                                <td>{{$property->location->name}}</td>
+                                <td>{{$property->category ? $property->category->name : ''}}</td>
+                                <td>{{$property->location ? $property->location->name : ''}}</td>
                                 <td>{{$property->price}}</td>
                                 <td>{{$property->description}}</td>
                                 <td>{{$property->ownerIdNo}}</td>
+                                <td>{{ $property->units }}</td>
                                 <td>..ACTIONS...</td>
                             </tr>
                         @endforeach

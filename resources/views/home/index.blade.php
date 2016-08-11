@@ -118,11 +118,12 @@
                                         <a href="/single/{{ $property->id }}/{{ $property->name }}" class="btn3">View</a>
                                         <p class="price">Ksh{{$property->price}}/=</p>
                                     </div>
+                                        {{-- */ $features = $property->features->lists('name')->take(3)->flatten()->all() /* --}}
                                     <table border="1" class="propertyDetails">
                                         <tbody><tr>
-                                            <td><img src="/imported/images/area.png" alt="" style="margin-right:7px;">2,412m</td>
-                                            <td><img src="/imported/images/bed.png" alt="" style="margin-right:7px;">6 Beds</td>
-                                            <td><img src="/imported/images/drop.png" alt="" style="margin-right:7px;">3 Baths</td>
+                                            <td><img src="/imported/images/area.png" alt="" style="margin-right:7px;">{{$features ? $features[0] : ""}}</td>
+                                            <td><img src="/imported/images/bed.png" alt="" style="margin-right:7px;">{{ $features ? $features[1] : ""}}</td>
+                                            <td><img src="/imported/images/drop.png" alt="" style="margin-right:7px;">{{$features ?  $features[2] : ""}}</td>
                                         </tr>
                                         </tbody></table>
 

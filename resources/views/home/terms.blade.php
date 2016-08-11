@@ -41,9 +41,27 @@
             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
             <h6>Copyright Notice</h6>
             <p> you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures</p>
+
+            <div class="subscribe">
+                <div class="container">
+                    {!! Form::open(array('url' => 'booking/accept-terms', 'method' => 'POST' )) !!}
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="accept"> I Accept
+                        </label>
+                    </div>
+
+                    <input type="submit" value="Submit">
+                    {!! Form::close() !!}
+                </div>
+            </div>
+
+
         </div>
     </div>
     <!--- /terms ---->
+
+
 </section>
 <!-- //Terms of use-section -->
     @endsection

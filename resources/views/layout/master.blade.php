@@ -2,6 +2,8 @@
 @include("partials._head")
 <body>
 @include("partials._navigation")
+
+@include("partials._error")
 <!--fb-like-button-code-->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
