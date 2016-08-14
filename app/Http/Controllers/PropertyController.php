@@ -9,6 +9,8 @@ use App\Property;
 use App\Location;
 use Illuminate\Http\Request;
 use Gate;
+use Response;
+use Illuminate\Support\Facades\Input;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\App;
@@ -23,7 +25,7 @@ class PropertyController extends Controller
 
     public function __construct()
     {
-        $this->authorize( 'admin');
+//        $this->authorize( 'admin');
     }
     public function index()
     {
@@ -100,7 +102,7 @@ class PropertyController extends Controller
 
                     $image = new Image(['name' => $image_name]);
                     $property->images()->save($image);
-                }
+                  }
 
             }
         }
@@ -163,9 +165,14 @@ class PropertyController extends Controller
 
     public function createImages($id)
     {
+
         $property = Property::findOrFail($id);
         if($property){
-            return view('admin.property.create_images',['property', $property]);
+            return view('admin.property.create_images')->with('property', $property);
+        }
+        else
+        {
+            return "something went wrong";
         }
 
     }
@@ -173,7 +180,7 @@ class PropertyController extends Controller
     public function storeImages(Request $request)
     {
 
-        $property = Property::findOrFail($request->id);
+        $property = Property::findOrFail($request->property_id);
 
         if(!$property)
         {
@@ -194,12 +201,58 @@ class PropertyController extends Controller
             $image = new Image(['name' => $image_name]);
             $property->images()->save($image);
 
-            return Response::json('success', 200);
+            return Response::json([
+                'success' => true,
+                'image_name' => $image_name,
+                'code' => 200], 200);
 
         }
         else{
             return Response::json('error, unable to upload', 400);
         }
+    }
+
+    public function deleteImage()
+    {
+        $name = Input::get('id');
+        if(!$name){
+            return Response::json([
+                'error' => true,
+                'message' => $name,
+                'code' => 400
+            ],400);
+        }
+        $image = Image::where('name','like',$name)->first();
+        if(empty($image))
+        {
+            return Response::json([
+                'error' => true,
+                'message' => $name,
+                'code' => 400
+            ],400);
+        }
+        $image->deleteImage();
+
+        return Response::json(
+            ['success' => true,
+            'message' => $name + ' deleted',
+                'code' => 200
+            ], 200
+        );
+
+    }
+
+    public function getImages($id)
+    {
+        $property = Property::findOrFail($id);
+        if(!$property)
+        {
+            return Response::json('error, property does not exist!!', 400);
+        }
+
+        $property_images = $property->images()->lists('name')->all();
+
+        return Response::json($property_images,200);
     }
 
 }

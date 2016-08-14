@@ -27,37 +27,31 @@
                 <form method="POST" url="">
                     {!! csrf_field() !!}
                     <label>First Name <span>*</span></label>
-                    <input type="text" class="phone" placeholder="">
+                    <input name="fname" type="text" class="phone" placeholder="">
                     <div class="clearfix"></div>
 
                     <label>Last Name<span>*</span></label>
-                    <input type="text" class="phone" placeholder="">
+                    <input name="lname" type="text" class="phone" placeholder="">
                     <div class="clearfix"></div>
 
-                    <label>Gender <span>*</span></label>
-                    <select class="">
-                        <option>Gender</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                    </select>
-                    <div class="clearfix"></div>
-
-                    <label>Date of Birth<span>*</span></label>
-                    <input type="text" class="phone" placeholder="">
-                    <div class="clearfix"></div>
                     <!--label>Address <span>*</span></label>
                     <textarea class="mess" placeholder="Address"></textarea>
                     <div class="clearfix"></div-->
+
                     <label>Email<span>*</span></label>
-                    <input type="text" class="phone" placeholder="">
+                    <input name="email" type="text" class="phone" placeholder="">
+                    <div class="clearfix"></div>
+
+                    <label>Phone Number<span>*</span></label>
+                    <input name="phone" type="text" class="phone" placeholder="">
                     <div class="clearfix"></div>
 
                     <label>Password<span>*</span></label>
-                    <input type="text" class="phone" placeholder="">
+                    <input name="password" type="text" class="phone" placeholder="">
                     <div class="clearfix"></div>
 
                     <label>Confirm Password<span>*</span></label>
-                    <input type="text" class="phone" placeholder="">
+                    <input name="password_confirmation" type="text" class="phone" placeholder="">
                     <div class="clearfix"></div>
 
 

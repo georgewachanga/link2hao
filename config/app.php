@@ -157,6 +157,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         'Serverfireteam\Blog\BlogServiceProvider',
         'Collective\Html\HtmlServiceProvider',
+        Barryvdh\Debugbar\ServiceProvider::class,
 
 
     ],

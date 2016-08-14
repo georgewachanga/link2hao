@@ -138,8 +138,8 @@
                         </div>
                         <div class="sparkline">
                             <!--graph-->
-                            <link rel="stylesheet" href="css/graph.css">
-                            <script src="js/jquery.flot.min.js"></script>
+                            <link rel="stylesheet" href="/css/graph.css">
+                            <script src="/js/jquery.flot.min.js"></script>
                             <!--//graph-->
                             <script>
                                 $(document).ready(function () {
@@ -219,7 +219,7 @@
                         <h3>Mail Inbox</h3>
                         <div class="scrollbar scrollbar1" id="style-2">
                             <div class="activity-row">
-                                <div class="col-xs-3 activity-img"><img src='images/1.png' class="img-responsive" alt=""/></div>
+                                <div class="col-xs-3 activity-img"><img src='/images/1.png' class="img-responsive" alt=""/></div>
                                 <div class="col-xs-7 activity-desc">
                                     <h5><a href="#">John Smith</a></h5>
                                     <p>Hey ! There I'm available.</p>
@@ -228,7 +228,7 @@
                                 <div class="clearfix"> </div>
                             </div>
                             <div class="activity-row">
-                                <div class="col-xs-3 activity-img"><img src='images/5.png' class="img-responsive" alt=""/></div>
+                                <div class="col-xs-3 activity-img"><img src='/images/5.png' class="img-responsive" alt=""/></div>
                                 <div class="col-xs-7 activity-desc">
                                     <h5><a href="#">Andrew Jos</a></h5>
                                     <p>Hey ! There I'm available.</p>
@@ -237,7 +237,7 @@
                                 <div class="clearfix"> </div>
                             </div>
                             <div class="activity-row">
-                                <div class="col-xs-3 activity-img"><img src='images/3.png' class="img-responsive" alt=""/></div>
+                                <div class="col-xs-3 activity-img"><img src='/images/3.png' class="img-responsive" alt=""/></div>
                                 <div class="col-xs-7 activity-desc">
                                     <h5><a href="#">Adom Smith</a></h5>
                                     <p>Hey ! There I'm available.</p>
@@ -246,7 +246,7 @@
                                 <div class="clearfix"> </div>
                             </div>
                             <div class="activity-row">
-                                <div class="col-xs-3 activity-img"><img src='images/4.png' class="img-responsive" alt=""/></div>
+                                <div class="col-xs-3 activity-img"><img src='/images/4.png' class="img-responsive" alt=""/></div>
                                 <div class="col-xs-7 activity-desc">
                                     <h5><a href="#">Peter Carl</a></h5>
                                     <p>Hey ! There I'm available.</p>
@@ -255,7 +255,7 @@
                                 <div class="clearfix"> </div>
                             </div>
                             <div class="activity-row">
-                                <div class="col-xs-3 activity-img"><img src='images/1.png' class="img-responsive" alt=""/></div>
+                                <div class="col-xs-3 activity-img"><img src='/images/1.png' class="img-responsive" alt=""/></div>
                                 <div class="col-xs-7 activity-desc">
                                     <h5><a href="#">John Smith</a></h5>
                                     <p>Hey ! There I'm available.</p>
@@ -271,7 +271,7 @@
                         <h3>MESSAGES</h3>
                         <div class="scrollbar" id="style-2">
                             <div class="activity-row activity-row1">
-                                <div class="col-xs-3 activity-img"><img src='images/1.png' class="img-responsive" alt=""/><span>10:00 PM</span></div>
+                                <div class="col-xs-3 activity-img"><img src='/images/1.png' class="img-responsive" alt=""/><span>10:00 PM</span></div>
                                 <div class="col-xs-5 activity-img1">
                                     <div class="activity-desc-sub">
                                         <h5>John Smith</h5>
@@ -289,11 +289,11 @@
                                         <p>Hi,How are you ? What about our next meeting?</p>
                                     </div>
                                 </div>
-                                <div class="col-xs-3 activity-img"><img src='images/3.png' class="img-responsive" alt=""/><span>10:02 PM</span></div>
+                                <div class="col-xs-3 activity-img"><img src='/images/3.png' class="img-responsive" alt=""/><span>10:02 PM</span></div>
                                 <div class="clearfix"> </div>
                             </div>
                             <div class="activity-row activity-row1">
-                                <div class="col-xs-3 activity-img"><img src='images/1.png' class="img-responsive" alt=""/><span>10:00 PM</span></div>
+                                <div class="col-xs-3 activity-img"><img src='/images/1.png' class="img-responsive" alt=""/><span>10:00 PM</span></div>
                                 <div class="col-xs-5 activity-img1">
                                     <div class="activity-desc-sub">
                                         <h5>John Smith</h5>
@@ -311,7 +311,7 @@
                                         <p>Wow that's great</p>
                                     </div>
                                 </div>
-                                <div class="col-xs-3 activity-img"><img src='images/3.png' class="img-responsive" alt=""/><span>10:02 PM</span></div>
+                                <div class="col-xs-3 activity-img"><img src='/images/3.png' class="img-responsive" alt=""/><span>10:02 PM</span></div>
                                 <div class="clearfix"> </div>
                             </div>
                         </div>

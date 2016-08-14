@@ -3,7 +3,7 @@
 <body>
 @include("partials._navigation")
 
-@include("partials._error")
+@yield("error")
 <!--fb-like-button-code-->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

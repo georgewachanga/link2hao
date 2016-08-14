@@ -26,7 +26,7 @@
                                     </div>
                                 </li>
                                 <li><a href="#">
-                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="user_img"><img src="/images/1.png" alt=""></div>
                                         <div class="notification_desc">
                                             <p>Lorem ipsum dolor sit amet</p>
                                             <p><span>1 hour ago</span></p>
@@ -34,7 +34,7 @@
                                         <div class="clearfix"></div>
                                     </a></li>
                                 <li class="odd"><a href="#">
-                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="user_img"><img src="/images/1.png" alt=""></div>
                                         <div class="notification_desc">
                                             <p>Lorem ipsum dolor sit amet </p>
                                             <p><span>1 hour ago</span></p>
@@ -42,7 +42,7 @@
                                         <div class="clearfix"></div>
                                     </a></li>
                                 <li><a href="#">
-                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="user_img"><img src="/images/1.png" alt=""></div>
                                         <div class="notification_desc">
                                             <p>Lorem ipsum dolor sit amet </p>
                                             <p><span>1 hour ago</span></p>
@@ -83,7 +83,7 @@
                                     </div>
                                 </li>
                                 <li><a href="#">
-                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="user_img"><img src="/images/1.png" alt=""></div>
                                         <div class="notification_desc">
                                             <p>Lorem ipsum dolor sit amet</p>
                                             <p><span>1 hour ago</span></p>
@@ -91,7 +91,7 @@
                                         <div class="clearfix"></div>
                                     </a></li>
                                 <li class="odd"><a href="#">
-                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="user_img"><img src="/images/1.png" alt=""></div>
                                         <div class="notification_desc">
                                             <p>Lorem ipsum dolor sit amet </p>
                                             <p><span>1 hour ago</span></p>
@@ -99,7 +99,7 @@
                                         <div class="clearfix"></div>
                                     </a></li>
                                 <li><a href="#">
-                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="user_img"><img src="/images/1.png" alt=""></div>
                                         <div class="notification_desc">
                                             <p>Lorem ipsum dolor sit amet </p>
                                             <p><span>1 hour ago</span></p>
@@ -173,7 +173,7 @@
                         <li class="dropdown profile_details_drop">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                 <div class="profile_img">
-                                    <span style="background:url(images/1.jpg) no-repeat center"> </span>
+                                    <span style="background:url(/images/1.jpg) no-repeat center"> </span>
                                     <div class="user-name">
                                         <p>Michael<span>Administrator</span></p>
                                     </div>
@@ -221,7 +221,7 @@
                     </div>
                 </div>
                 <div class="col-xs-5 error-main-right">
-                    <img src="images/7.png" alt=" " class="img-responsive" />
+                    <img src="/images/7.png" alt=" " class="img-responsive" />
                 </div>
                 <div class="clearfix"> </div>
             </div>

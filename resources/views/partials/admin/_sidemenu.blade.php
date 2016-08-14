@@ -46,8 +46,8 @@
 
             <li class="menu-list"><a href="#"><i class="lnr lnr-envelope"></i> <span>MailBox</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="inbox">Inbox</a> </li>
-                    <li><a href="compose">Compose Mail</a></li>
+                    <li><a href="/inbox">Inbox</a> </li>
+                    <li><a href="/compose">Compose Mail</a></li>
                 </ul>
             </li>
             <li class="menu-list"><a href="#"><i class="lnr lnr-indent-increase"></i> <span>Menu Levels</span></a>
@@ -59,9 +59,9 @@
             <li><a href="media"><i class="lnr lnr-select"></i> <span>Media Css</span></a></li>
             <li class="menu-list act"><a href="#"><i class="lnr lnr-book"></i>  <span>Pages</span></a>
                 <ul class="sub-menu-list">
-                    <li><a href="sign-in">Sign In</a> </li>
-                    <li><a href="sign-up">Sign Up</a></li>
-                    <li><a href="blank_page">Blank Page</a></li>
+                    <li><a href="/sign-in">Sign In</a> </li>
+                    <li><a href="/sign-up">Sign Up</a></li>
+                    <li><a href="/blank_page">Blank Page</a></li>
                 </ul>
             </li>
         </ul>

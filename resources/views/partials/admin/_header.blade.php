@@ -22,7 +22,7 @@
                                     </div>
                                 </li>
                                 <li><a href="#">
-                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="user_img"><img src="/images/1.png" alt=""></div>
                                         <div class="notification_desc">
                                             <p>Lorem ipsum dolor sit amet</p>
                                             <p><span>1 hour ago</span></p>
@@ -30,7 +30,7 @@
                                         <div class="clearfix"></div>
                                     </a></li>
                                 <li class="odd"><a href="#">
-                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="user_img"><img src="/images/1.png" alt=""></div>
                                         <div class="notification_desc">
                                             <p>Lorem ipsum dolor sit amet </p>
                                             <p><span>1 hour ago</span></p>
@@ -38,7 +38,7 @@
                                         <div class="clearfix"></div>
                                     </a></li>
                                 <li><a href="#">
-                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="user_img"><img src="/images/1.png" alt=""></div>
                                         <div class="notification_desc">
                                             <p>Lorem ipsum dolor sit amet </p>
                                             <p><span>1 hour ago</span></p>
@@ -79,7 +79,7 @@
                                     </div>
                                 </li>
                                 <li><a href="#">
-                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="user_img"><img src="/images/1.png" alt=""></div>
                                         <div class="notification_desc">
                                             <p>Lorem ipsum dolor sit amet</p>
                                             <p><span>1 hour ago</span></p>
@@ -87,7 +87,7 @@
                                         <div class="clearfix"></div>
                                     </a></li>
                                 <li class="odd"><a href="#">
-                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="user_img"><img src="/images/1.png" alt=""></div>
                                         <div class="notification_desc">
                                             <p>Lorem ipsum dolor sit amet </p>
                                             <p><span>1 hour ago</span></p>
@@ -95,7 +95,7 @@
                                         <div class="clearfix"></div>
                                     </a></li>
                                 <li><a href="#">
-                                        <div class="user_img"><img src="images/1.png" alt=""></div>
+                                        <div class="user_img"><img src="/images/1.png" alt=""></div>
                                         <div class="notification_desc">
                                             <p>Lorem ipsum dolor sit amet </p>
                                             <p><span>1 hour ago</span></p>
@@ -169,7 +169,7 @@
                         <li class="dropdown profile_details_drop">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                 <div class="profile_img">
-                                    <span style="background:url(images/a.jpg) no-repeat center" class="img-responsive"> </span>
+                                    <span style="background:url(/images/a.jpg) no-repeat center" class="img-responsive"> </span>
                                     <div class="user-name">
                                         <p>Georgie<span>Super Admin</span></p>
                                     </div>

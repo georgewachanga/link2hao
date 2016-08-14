@@ -61,7 +61,7 @@ Route::group(['middleware' => 'web'],
         Route::get('blog','PagesController@GetBlog');
         Route::get('about','PagesController@GetAbout');
         Route::get('contact','PagesController@GetContact');
-        Route::get('test','PagesController@GetTest');
+        Route::get('test/{id}','PropertyController@createImages');
         Route::get('single/{id}/{name}','PagesController@GetSingle');
         Route::get('info','PagesController@GetInfo');
         Route::get('faq','PagesController@GetFaq');
@@ -73,6 +73,7 @@ Route::group(['middleware' => 'web'],
         Route::get('career','PagesController@GetCareer');
 
         Route::post('search', 'PagesController@getIndex');
+
 
 
 
@@ -121,3 +122,17 @@ Route::post('/storeImage', 'PropertyController@storeImages');
 
 Route::get('/booking/{id}/{name}', 'BookingController@getIndex');
 Route::post('/booking/accept-terms', 'BookingController@confirmTerms');
+
+Route::get('/testing/{id}', 'PropertyController@createImages');
+
+Route::post('/upload/delete/', 'PropertyController@deleteImage');
+
+Route::get('/property/{id}/images/', 'PropertyController@getImages');
+
+
+
+
+
+
+
+
