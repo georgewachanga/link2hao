@@ -7,9 +7,9 @@ use App\Http\Controllers\Controller;
 use \Serverfireteam\Panel\CrudController;
 
 use Illuminate\Http\Request;
-use App\Property;
+use App\Owner;
 
-class ImageController extends CrudController{
+class OwnerController extends CrudController{
 
     public function all($entity){
         parent::all($entity); 
@@ -17,18 +17,19 @@ class ImageController extends CrudController{
         /** Simple code of  filter and grid part , List of all fields here : http://laravelpanel.com/docs/master/crud-fields
 		*/
 
-			$this->filter = \DataFilter::source(new \App\Image);
-			$this->filter->add('name', 'Name', 'text');
-			$properties = ['' => 'Property'] + Property::lists('name','id')->all();
-			$this->filter->add('property_id', 'Property', 'select')->options($properties);
+			$this->filter = \DataFilter::source(new Owner);
+			$this->filter->add('id', 'ID', 'text');
+			$users = \App\User::where('user_type','App\Owner')->lists('fname','id')->all();
+			$this->filter->add('user_id','First Name','select')->options($users);
 			$this->filter->submit('search');
 			$this->filter->reset('reset');
 			$this->filter->build();
 
-			$this->grid = \DataGrid::source(\App\Image::with('property'));
-			$this->grid->add('name', 'Name');
-			$this->grid->add('property.name', 'Property');
+			$this->grid = \DataGrid::source(Owner::with('user'));
+			$this->grid->add('user.name', 'Name');
+			$this->grid->add('user.phone', 'Phone');
 			$this->addStylesToGrid();
+
 
                  
         return $this->returnView();
@@ -40,15 +41,13 @@ class ImageController extends CrudController{
 
         /* Simple code of  edit part , List of all fields here : http://laravelpanel.com/docs/master/crud-fields
 		*/
-			$this->edit = \DataEdit::source(new \App\Image());
+			$this->edit = \DataEdit::source(new Owner());
 
-			$this->edit->label('Edit Image');
+			$this->edit->label('Edit Owner');
 
 			$this->edit->add('name', 'Name', 'text');
 		
-			$this->edit->add('property_id', 'Property', 'select')->options(Property::lists('name', 'id')->all());
-
-			$this->edit->add('name', 'Photo', 'image')->move(public_path()."/uploads/")->preview(200,200);
+			$this->edit->add('code', 'Code', 'text')->rule('required');
        
         return $this->returnEditView();
     }    

@@ -29,7 +29,7 @@ class UserController extends CrudController{
 			$this->grid->add('id', 'ID');
 			$this->grid->add('fname', 'First Name');
 			$this->grid->add('lname', 'Last Name');
-			$this->grid->add('Email', 'email');
+			$this->grid->add('email', 'Email');
 			$this->grid->add('user_type', 'User type');
 			$this->addStylesToGrid();
 
@@ -47,13 +47,17 @@ class UserController extends CrudController{
 
 			$this->edit->label('Edit User');
 
+			$roles = [0 => '',1 => 'admin',2 => 'owner',3 => 'guest'];
+
+			$this->edit->add('userRole','Role','select')->options($roles);
+
 			$this->edit->add('fname', 'First Name', 'text')->rule('required');
 
 			$this->edit->add('lname', 'Last Name', 'text')->rule('required');
 		
 			$this->edit->add('email', 'Email', 'text')->rule('required');
 
-			$this->edit->add('password', 'Password', 'text')->rule('required');
+			$this->edit->add('password', 'Password', 'password');
 
        
         return $this->returnEditView();

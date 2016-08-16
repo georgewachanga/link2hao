@@ -25,7 +25,7 @@ class PropertyController extends Controller
 
     public function __construct()
     {
-//        $this->authorize( 'admin');
+        $this->middleware('auth.auth:admin');
     }
     public function index()
     {
@@ -71,6 +71,7 @@ class PropertyController extends Controller
             'ownerIdNo'=>$request->ownerIdNo,
             'units' => $request->units
         ]);
+        dd($request->category);
         $property->save();
         $property->features()->attach($request->features);
 
@@ -112,6 +113,18 @@ class PropertyController extends Controller
          * image logic
          */
 
+        /**
+         * owner login
+         */
+        $owner = Owner::where('phone',$request->phone)->first();
+
+        if(!$owner)
+        {
+            $owner = Owner::create(['fullname' => $request->fullname, 'phone' => $request->phone]);
+        }
+        $owner->properties()->save($property);
+
+
         return redirect('property')->with('id', $property->id);
 
     }
@@ -137,7 +150,12 @@ class PropertyController extends Controller
      */
     public function edit($id)
     {
-        //
+        $features = Feature::lists('name','id');
+        $cat = Category::lists('name','id');
+        $locs = Location::lists('name','id');
+        $property = Property::findOrFail($id);
+
+        return view('admin.property.edit',['property' => $property, 'categories' => $cat, 'features' => $features, 'locations' => $locs ]);
     }
 
     /**
@@ -149,7 +167,16 @@ class PropertyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $property = Property::findOrFail($id);
+        $property->update([
+            'name'=> $request->name,
+            'description'=>$request->description,
+            'price'=>$request->price,
+            'ownerIdNo'=>$request->ownerIdNo,
+            'units' => $request->units
+        ]);
+
+        return \Redirect::route('property.show', array('id' => $property->id))->with('message', 'Property updated');
     }
 
     /**

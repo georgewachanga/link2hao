@@ -44,6 +44,12 @@
                         </ul>
                     </div-->
                     <p>{{ $property->description }}</p>
+                    <h2>{{ $property->units }} Units Available</h2>
+
+                    @can("admin")
+                    <a href="/property/{{ $property->id }}/edit"><h2>Edit this property</h2></a>
+                    <a href="/property/{{ $property->id }}/create-images"><h2>Add Images to this property</h2></a>
+                    @endcan
 
                 </div>
             </div>

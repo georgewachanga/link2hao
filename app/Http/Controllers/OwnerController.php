@@ -40,15 +40,14 @@ class OwnerController extends Controller
     public function store(Request $request)
     {
         $owner = new Owner([
-            'fname'=>$request->fname,
-            'lname'=>$request->lname,
-            'idno'=>$request->idno,
-            'email'=>$request->email,
-            'password'=>$request->password
+            'fullname'=>$request->fullname,
+            'phone'=>$request->phone,
 
         ]);
 
         $owner->save();
+
+        return view('admin.owners.show',['owner' => $owner]);
     }
 
     /**
@@ -59,7 +58,8 @@ class OwnerController extends Controller
      */
     public function show($id)
     {
-        //
+        $owner = Owner::findOrFail($id);
+        return view('admin.owners.show',['owner' => $owner]);
     }
 
     /**
@@ -70,7 +70,8 @@ class OwnerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $owner = Owner::findOrFail($id);
+        return view('admin.owners.edit',['owner' => $owner]);
     }
 
     /**
@@ -82,7 +83,17 @@ class OwnerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $owner = Owner::findOrFail($id);
+        if($owner)
+        {
+            $owner->update([
+                'fullname' => $request->fullname,
+                'phone' => $request->phone
+            ]);
+        }
+
+        return view('admin.owners.show',['owner' => $owner]);
+
     }
 
     /**
@@ -93,6 +104,10 @@ class OwnerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $owner = Owner::findOrFail($id);
+        $name = $owner->fullname;
+        $owner->delete();
+
+        return redirect('owner')->with('message','deleted '.$name);
     }
 }

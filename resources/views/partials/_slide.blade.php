@@ -5,13 +5,13 @@
 
 
         <div class="header-top">
-            <!-- /header-left -->
+            <!-- /header-left --
             <div class="header-left">
 
                 <div class="tag"><a href="#" data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-tag"></span> Advertise your Houses >></a></div>
                 <div class="tag"><a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></div>
             </div>
-            <!-- //header-left -->
+            <!-- //header-left --
             <div class="search-box">
                 <div id="sb-search" class="sb-search">
                     <form action="#" method="post">
@@ -20,13 +20,13 @@
                         <span class="sb-icon-search"> </span>
                     </form>
                 </div>
-                <!-- search-scripts -->
+                <!-- search-scripts --
                 <script src="/slider/js/classie.js"></script>
                 <script src="/slider/js/uisearch.js"></script>
                 <script>
                     new UISearch( document.getElementById( 'sb-search' ) );
                 </script>
-                <!-- //search-scripts -->
+                <!-- //search-scripts --
                 <ul>
 
                     <li>
@@ -88,13 +88,13 @@
                                 }
                             }
                         </script>
-                        <!--Navigation from Right To Left-->
+                        <!--Navigation from Right To Left--
                     </li>
                 </ul>
 
             </div>
 
-            <div class="clearfix"></div>
+            <div class="clearfix"></div>-->
         </div>
         <div class="clearfix"></div>
         <!--banner-info-->
