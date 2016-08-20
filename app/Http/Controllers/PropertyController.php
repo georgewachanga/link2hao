@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Gate;
 use Response;
 use Illuminate\Support\Facades\Input;
+use Intervention\Image\ImageManagerStatic as ImageManager;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\App;
@@ -197,7 +198,9 @@ class PropertyController extends Controller
                 $image_name = 'link2hao_'.$property->id.'_'.time().'_'.$counter.'.'.$image->getClientOriginalExtension();
                 $counter ++;
             }
-            $image->move(public_path().'/uploads/', $image_name);
+            $manager = new ImageManager();
+            $image = $manager->make($image)->resize(600,480)->save('uploads/'.$image_name);
+            //$image->move(public_path().'/uploads/', $image_name);
             $image = new Image(['name' => $image_name]);
             $property->images()->save($image);
 
