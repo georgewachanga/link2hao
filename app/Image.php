@@ -12,7 +12,7 @@ class Image extends Model
 
     public function property ()
     {
-        return $this->belongsTo('App/Property');
+        return $this->belongsTo('App\Property');
     }
 
     public function deleteImage()

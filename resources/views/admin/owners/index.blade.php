@@ -16,24 +16,18 @@
                             <thead>
                             <tr>
                                 <th>id</th>
-                                <th>FNAME</th>
-                                <th>LNAME</th>
-                                <th>OWNER ID</th>
-                                <th>EMAIL</th>
-                                <th>PASSWORD</th>
-                                <th>ACTION</th>
+                                <th>fullname</th>
+                                <th>phone</th>
+                                <th>edit</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($owners as $owner)
                                 <tr>
                                     <th scope="row">{{$owner->id}}</th>
-                                    <td>{{$owner->fname}}</td>
-                                    <td>{{$owner->lname}}</td>
-                                    <td>{{$owner->idno}}</td>
-                                    <td>{{$owner->email}}</td>
-                                    <td>{{$owner->password}}</td>
-                                    <td>..ACTIONS...</td>
+                                    <td>{{$owner->fullname}}</td>
+                                    <td>{{$owner->phone}}</td>
+                                    <td><a href="/owner/{{ $owner->id }}/edit">EDIT</a> </td>
                                 </tr>
                             @endforeach
                             </tbody>

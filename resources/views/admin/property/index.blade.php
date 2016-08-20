@@ -23,7 +23,7 @@
                                 <th>DESCRIPTION</th>
                                 <th>OWNER ID</th>
                                 <th>UNITS EMPTY</th>
-                                <th>ACTION</th>
+                                <th>EDIT</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -37,7 +37,7 @@
                                 <td>{{$property->description}}</td>
                                 <td>{{$property->ownerIdNo}}</td>
                                 <td>{{ $property->units }}</td>
-                                <td>..ACTIONS...</td>
+                                <td><a href="/property/{{ $property->id }}/edit">edit</a></td>
                             </tr>
                         @endforeach
                             </tbody>

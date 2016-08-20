@@ -109,7 +109,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 team-grids team-mdl">
-                    <h5>JaneRose Wambui</h5>
+                    <h5>JaneRose Wamb</h5>
                     <p>She is the co-founder of Link2hao and fiancee to the CEO.</p>
                     <div class="abt-social-icons">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -122,14 +122,14 @@
                 </div>
                 <div class="col-md-3 team-grids team-mdl1">
                     <h5>Magnus Otwani</h5>
-                    <p>He is the estates manager at Link2hao</p>
+                    <p>He is the lead Developer at link2hao.com</p>
                     <div class="abt-social-icons">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                        <a href="https://facebook.com/magnusotwani"><i class="fa fa-facebook"></i></a>
+                        <a href="https://tweeter.com/magnusotwani"><i class="fa fa-twitter"></i></a>
+                        <a href="https://github.com/magnito2"><i class="fa fa-pinterest-p"></i></a>
                     </div>
                     <div class="team-img">
-                        <img src="images/mkubwa.JPG" alt="">
+                        <img src="images/magnus.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-md-3 team-grids">

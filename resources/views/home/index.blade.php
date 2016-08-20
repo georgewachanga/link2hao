@@ -117,6 +117,7 @@
 
                                         <a href="/single/{{ $property->id }}/{{ $property->name }}" class="btn3">View</a>
                                         <p class="price">Ksh{{$property->price}}/=</p>
+                                        <p class="price">{{ $property->units }} Units Available</p>
                                     </div>
                                         {{-- */ $features = $property->features->lists('name')->take(3)->flatten()->all() /* --}}
                                     <table border="1" class="propertyDetails">
@@ -171,7 +172,7 @@
             <h3>RECCOMMENDED HOUSES</h3>
             <p>Here, there and everywhere... what we've been doing</p>
         </div>
-        <div class="news-section-grids">
+        <!-- <div class="news-section-grids">
             <div class="col-md-4 news-section-grid">
                 <img src="/images/1.jpg" alt="" />
                 <div class="info">
@@ -200,7 +201,7 @@
                 </div>
             </div>
             <div class="clearfix"></div>
-        </div>
+        </div>-->
     </div>
 </div>
 
@@ -255,22 +256,22 @@
             <div class="stats-info">
                 <div class="col-md-3 col-sm-3 stats-grid slideanim">
                     <i class="fa fa-smile-o"></i>
-                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='100' data-delay='.5' data-increment="10">18000</div>
+                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='0' data-delay='.5' data-increment="10">0</div>
                     <p class="stats-info">Happy Smiles</p>
                 </div>
                 <div class="col-md-3 col-sm-3 stats-grid slideanim">
                     <i class="fa fa-facebook"></i>
-                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='179' data-delay='.5' data-increment="1">17000</div>
+                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='0' data-delay='.5' data-increment="1">0</div>
                     <p class="stats-info">Facebook Likes</p>
                 </div>
                 <div class="col-md-3 col-sm-3 stats-grid slideanim">
                     <i class="fa fa-twitter"></i>
-                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='27' data-delay='.5' data-increment="1">21500</div>
+                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='0' data-delay='.5' data-increment="1">0</div>
                     <p class="stats-info">Twitter Followers</p>
                 </div>
                 <div class="col-md-3 col-sm-3 stats-grid slideanim">
                     <i class="fa fa-flask"></i>
-                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='51' data-delay='.5' data-increment="1">20500</div>
+                    <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='0' data-delay='.5' data-increment="1">0</div>
                     <p class="stats-info">Subscriptions</p>
                 </div>
                 <div class="clearfix"></div>

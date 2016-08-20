@@ -75,15 +75,6 @@ Route::group(['middleware' => 'web'],
         Route::post('search', 'PagesController@getIndex');
 
 
-
-
-
-
-
-
-
-
-
 });
 
 
@@ -123,16 +114,10 @@ Route::post('/storeImage', 'PropertyController@storeImages');
 Route::get('/booking/{id}/{name}', 'BookingController@getIndex');
 Route::post('/booking/accept-terms', 'BookingController@confirmTerms');
 
-Route::get('/testing/{id}', 'PropertyController@createImages');
 
-Route::post('/upload/delete/', 'PropertyController@deleteImage');
+
+Route::get('/property/{id}/create-images', 'PropertyController@createImages');
+
+Route::post('/property/image/delete/', 'PropertyController@deleteImage');
 
 Route::get('/property/{id}/images/', 'PropertyController@getImages');
-
-
-
-
-
-
-
-

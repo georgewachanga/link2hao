@@ -6,7 +6,7 @@
 
         <div class="adminn">
 
-            {!! Form::open(array('route' => 'property.store', 'method' => 'POST', 'files' => true)) !!}
+            {!! Form::model($property, array('method' => 'put', 'route' => ['property.update', $property->id], 'class' => 'form')) !!}
 
             {{Form::label('name', 'propety Name') }}
             {{Form::text('name', null, array('class'=>'form-control'))}}
@@ -34,14 +34,14 @@
 
             {!! Form::label('profile images') !!}
             {!! Form::file('images[]',array('multiple'=>true, 'id' => 'images_holder')) !!}
-            {{Form::submit('create a new property', array('class'=>'btn btn-success btn-lg btn-block '))}}
+            {{Form::submit('update property', array('class'=>'btn btn-success btn-lg btn-block '))}}
             {!! Form::close() !!}
 
         </div>
 
-<div>
+        <div>
 
 
-</div>
+        </div>
     </div>
-    @endsection
+@endsection

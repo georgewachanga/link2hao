@@ -26,7 +26,9 @@
 
                             </header>
 
-
+                            @can("admin")
+                            <a class="cd-logo link link--takiri" href="/property/{{ $property->id }}/create-images">ADD IMAGES TO THIS PROPERTY</a>
+                            @endcan
 
                             <div id="slider" class="sl-slider-wrapper">
 

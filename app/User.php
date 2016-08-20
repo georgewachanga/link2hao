@@ -24,10 +24,10 @@ class User extends Authenticatable
        'password', 'remember_token',
     ];
 
-    public function setPasswordAttribute($password)
+    /*public function setPasswordAttribute($password)
     {
         $this->attributes['password'] = bcrypt($password);
-    }
+    }*/
 
     public function usertype(){
 
@@ -74,5 +74,13 @@ class User extends Authenticatable
             return true;
         }
         return false;
+    }
+
+    public function userRole(){
+        $userRole = \Request::input('UserRole');
+        if($userRole)
+        {
+            dd($userRole);
+        }
     }
 }

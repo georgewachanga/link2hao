@@ -9,10 +9,22 @@
         <li><a href="/consultancy">Consultancy</a></li>
         <li><a href="/career">Jobs</a></li>
         <li><a href="/news">News</a></li>
-        <li><a href="/faq">FAQ</a></li>
-        <li><a href="/market">E-Market</a></li>
+        <!--<li><a href="/faq">FAQ</a></li>
+        <li><a href="/market">E-Market</a></li>-->
         <li><a href="/contact">Contact Us</a></li>
         <li><a href="/terms">Terms</a></li>
+        @if (Auth::guest())
+            <li><a href="{{ url('/login') }}">Login</a></li>
+            <li><a href="{{ url('/register') }}">Register</a></li>
+        @else
+            <li>
+                    @can("admin")
+                        <a href="/property">Admin {{ Auth::user()->fname }}</a>
+                    @else
+                        <a href="#">{{ Auth::user()->fname }}</a>
+                    @endcan</li>
+            <li><a href="{{ url('/logout') }}">Logout</a></li>
+            @endif
 
 
 
