@@ -248,6 +248,7 @@ class PropertyController extends Controller
                 $counter ++;
             }
             $manager = new ImageManager();
+            $image->insert('images/watermark.png');
             $image = $manager->make($image)->resize(600,480)->save('uploads/'.$image_name);
             //$image->move(public_path().'/uploads/', $image_name);
             $image = new Image(['name' => $image_name]);
