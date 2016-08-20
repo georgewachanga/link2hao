@@ -23,11 +23,14 @@
             {{Form::label('description', 'property desc:') }}
             {{Form::text('description', null, array('class'=>'form-control'))}}
 
-            {{Form::label('price', 'propty price') }}
+            {{Form::label('price', 'property price') }}
             {{Form::text('price', null, array('class'=>'form-control'))}}
 
-            {{Form::label('ownerIdNo', 'owner id no') }}
-            {{Form::text('ownerIdNo', null, array('class'=>'form-control'))}}
+            {{Form::label('owner fullname', 'owner name') }}
+            {{Form::text('fullname', null, array('class'=>'form-control'))}}
+
+            {{Form::label('owner number', 'owner mobile') }}
+            {{Form::text('phone', null, array('class'=>'form-control'))}}
 
             {{Form::label('units', 'number of units available') }}
             {{Form::text('units', null, array('class'=>'form-control'))}}

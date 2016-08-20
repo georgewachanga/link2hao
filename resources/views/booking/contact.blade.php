@@ -92,5 +92,59 @@
     </div>
 </section>
 <!-- //contact-section -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<div class="modal ab fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog about" role="document">
+        <div class="modal-content about">
+            <div class="modal-header">
+                <button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="discount">
+                    <h3>OUR CONTACT INFORMATION</h3>
+                    <p>If you are not contacted in the next 20 minutes, Contact ..</p>
+                </div>
+            </div>
+            <div class="modal-body about">
+
+                <div class="dis-contact" style="text-align: center">
+                    <div class="row">
+                        <div class="col-md-5 location">
+                            <h4>Address1 :</h4>
+                            <p>Managing Director</p>
+                            <p>George Wachanga</p>
+                            <p>Telephone : 0702452640</p>
+                            <p>Facebook : sirgeorge Wachanga</p>
+                            <p>Email : <a href="mailto:george@link2ho.com">@link2ho.com</a></p>
+                        </div>
+
+                        <div class="col-md-2 location">
+
+                        </div>
+
+                        <div class="col-md-5 location">
+                            <h4>Address4 :</h4>
+                            <p>Secretary</p>
+                            <p>Tabitha Soo</p>
+                            <p>Telephone : 0710727030</p>
+                            <p>Facebook: tabby</p>
+                            <p>Email : <a href="mailto:tabby@link2ho.com">tabby@link2ho.com</a></p>
+                        </div>
+
+                        <div class="hide" id="book">
+                            {{ isset($booked) ? "<div id='booked'> </div>" : "" }}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#myModal').modal('show');
+    });
+</script>
 
 @endsection

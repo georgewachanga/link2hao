@@ -158,6 +158,7 @@ return [
         'Serverfireteam\Blog\BlogServiceProvider',
         'Collective\Html\HtmlServiceProvider',
         Barryvdh\Debugbar\ServiceProvider::class,
+        'Thujohn\Twitter\TwitterServiceProvider',
 
 
     ],
@@ -207,6 +208,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => 'Collective\Html\FormFacade',
         'Html' => 'Collective\Html\HtmlFacade',
+        'Twitter' => 'Thujohn\Twitter\Facades\Twitter',
+        'Input' => Illuminate\Support\Facades\Input::class,
 
     ],
 

@@ -10,7 +10,7 @@
         <div id="breadcrumb_wrapper">
             <div class="container">
                 <h2>FEEL FREE TO CONSULT</h2>
-                <h6>add a short description here</h6>
+                <h6>We give you free housing advice</h6>
             </div>
         </div>
     </div>

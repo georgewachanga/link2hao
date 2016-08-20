@@ -71,7 +71,7 @@ class PropertyController extends Controller
             'ownerIdNo'=>$request->ownerIdNo,
             'units' => $request->units
         ]);
-        dd($request->category);
+
         $property->save();
         $property->features()->attach($request->features);
 
@@ -138,8 +138,30 @@ class PropertyController extends Controller
     public function show($id)
     {
         $property = Property::findOrFail($id);
+        $cat = $property->category;
+        $loc = $property->location;
 
-        return view('admin.property.show')->with('property',$property);
+        if($cat)
+        {
+            if($loc)
+            {
+                $related = Property::where('category_id',$property->category->id)->where('location_id',$property->location->id)->get();
+            }
+            else
+            {
+                $related = Property::where('category_id',$property->category->id)->get();
+            }
+        }
+        elseif($loc)
+        {
+            $related = Property::where('category_id',$property->category->id)->get();
+        }
+        else
+        {
+            $related = null;
+        }
+
+        return view('admin.property.show',['related' => $related])->with('property',$property);
     }
 
     /**
@@ -172,7 +194,7 @@ class PropertyController extends Controller
             'name'=> $request->name,
             'description'=>$request->description,
             'price'=>$request->price,
-            'ownerIdNo'=>$request->ownerIdNo,
+            ''=>$request->ownerIdNo,
             'units' => $request->units
         ]);
 

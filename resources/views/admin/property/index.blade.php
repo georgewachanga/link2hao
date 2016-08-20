@@ -5,14 +5,16 @@
 
     <div id="page-wrapper">
         <div class="graphs">
-            <h3 class="blank1">SHOWING INFORMATION ABOUT ALL REGISTERED  PROPERTIES</h3>
+            <h3> SHOWING ALL PROPERTIES DETAILS<a href="/property/create" class="btn btn-primary pull-right">Add New</a></h3>
             <div class="xs tabls">
+
 
                 <div class="bs-example4" data-example-id="simple-responsive-table">
                     <div class="table-responsive">
 
 
                         <table class="table table-bordered">
+
                             <thead>
                             <tr>
                                 <th>ID</th>
