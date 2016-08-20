@@ -135,27 +135,35 @@
                             </div>
                             @endforeach
 
-
-
-
-
-
-
-
-
-
                             <div class="clearfix"></div>
                         </div>
                     </div>
                         @endforeach
-
-
-
-
                 </div>
-
-
             </div>
+
+            <div class="clearfix"> </div>
+            <ul class="start">
+                @if($properties->currentPage() !== 1)
+                    <li><a href="{{ $properties->previousPageUrl() }}"><span class="prev">Prev</span></a></li>
+                    <li><a href="{{ $properties->url(1) }}"> <span>firstPage</span></a></li>
+                @endif
+                    <li><span>.....</span></li>
+                @if($properties->currentPage() !== $properties->lastPage())
+                        <li><a href="{{ $properties->url($properties->lastPage()) }}"> <span>lastPage</span></a></li>
+                    <li><a href="{{ $properties->nextPageUrl() }}" class="next">Next</a></li>
+                @endif
+                <!--li><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><span>.....</span></li>
+                <li><a href="#">12</a></li-->
+            </ul>
 
 
         </div>
