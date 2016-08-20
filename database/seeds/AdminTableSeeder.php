@@ -36,5 +36,43 @@ class AdminTableSeeder extends Seeder
         $user->save();
         $admin = Admin::create([]);
         $admin->user()->save($user);
+
+        $user = new User([
+            'fname' => 'Magnus',
+            'lname' => 'Otwani',
+            'idno' => '111111111',
+            'phone' => '00000000',
+            'email' => 'magnusotwani1@yahoo.com',
+            'password' => bcrypt('Sch1z01d')
+        ]);
+        $user->save();
+        $admin = Admin::create([]);
+        $admin->user()->save($user);
+
+        $user = new User([
+            'fname' => 'Magnus',
+            'lname' => 'Otwani',
+            'idno' => '111111111',
+            'phone' => '00000000',
+            'email' => 'magnusotwani2@yahoo.com',
+            'password' => bcrypt('Sch1z01d')
+        ]);
+        $user->save();
+        $admin = Admin::create([]);
+        $admin->user()->save($user);
+
+        $user = new User([
+            'fname' => 'Magnus',
+            'lname' => 'Otwani',
+            'idno' => '111111111',
+            'phone' => '00000000',
+            'email' => 'magnusotwani3@yahoo.com',
+            'password' => bcrypt('Sch1z01d')
+        ]);
+        $user->save();
+        $admin = Admin::create([]);
+        $admin->user()->save($user);
+
+
     }
 }

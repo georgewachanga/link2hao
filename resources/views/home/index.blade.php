@@ -124,7 +124,7 @@
                                         <tbody><tr>
                                             <td><img src="/imported/images/area.png" alt="" style="margin-right:7px;">{{$features ? $features[0] : ""}}</td>
                                             <td><img src="/imported/images/bed.png" alt="" style="margin-right:7px;">{{ $features ? $features[1] : ""}}</td>
-                                            <td><img src="/imported/images/drop.png" alt="" style="margin-right:7px;">{{$features ?  $features[2] : ""}}</td>
+                                            <td><img src="/imported/images/drop.png" alt="" style="margin-right:7px;">{{$features ?  $features[1] : ""}}</td>
                                         </tr>
                                         </tbody></table>
 
@@ -169,7 +169,7 @@
 <div class="news-section" id="news">
     <div class="container">
         <div class="news-section-head text-center">
-            <h3>RECCOMMENDED HOUSES</h3>
+            <h3>RECOMMENDED HOUSES</h3>
             <p>Here, there and everywhere... what we've been doing</p>
         </div>
         <!-- <div class="news-section-grids">

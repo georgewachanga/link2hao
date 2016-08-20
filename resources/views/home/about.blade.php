@@ -31,26 +31,6 @@
 
 
 
-    <div class="who-are-we">
-        <div class="container">
-            <h3>We are no. 1...<span>WHY?</span></h3>
-            <div class="col-md-6 who-grids">
-                <ul class="whogrid_info">
-                    <li class="tick">We give you the best services of all.</li>
-                    <li class="tick">Your reservation is timely. </li>
-                    <li class="tick">No struggle...No hustle.</li>
-                </ul>
-            </div>
-            <div class="col-md-6 who-grids">
-                <ul class="whogrid_info">
-                    <li class="tick">We are accessible all the time.</li>
-                    <li class="tick">We are always open to new ideas and opportunities.</li>
-                    <li class="tick">We are trustworthy, Give a try!!</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--/who-we-are-->
 
 
 
@@ -90,6 +70,11 @@
     <!-- //banner-bottom -->
 
 
+
+
+
+
+
     <!--team-->
     <section class="team text-center">
         <div class="container">
@@ -109,8 +94,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 team-grids team-mdl">
-                    <h5>JaneRose Wamb</h5>
-                    <p>She is the co-founder of Link2hao and fiancee to the CEO.</p>
+                    <h5>Boniface Otieno</h5>
+                    <p>He is the organising manager and coordiantor at Link2hao.</p>
                     <div class="abt-social-icons">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
@@ -122,7 +107,7 @@
                 </div>
                 <div class="col-md-3 team-grids team-mdl1">
                     <h5>Magnus Otwani</h5>
-                    <p>He is the lead Developer at link2hao.com</p>
+                    <p>He is the IT Manager an lead Developer at link2hao.com</p>
                     <div class="abt-social-icons">
                         <a href="https://facebook.com/magnusotwani"><i class="fa fa-facebook"></i></a>
                         <a href="https://tweeter.com/magnusotwani"><i class="fa fa-twitter"></i></a>
@@ -133,8 +118,21 @@
                     </div>
                 </div>
                 <div class="col-md-3 team-grids">
-                    <h5>Mwangi Macharia</h5>
-                    <p>He is the chief agent at Link2hao.</p>
+                    <h5>Tabitha Soo</h5>
+                    <p>She is the Project manager and Secretary at Link2hao</p>
+                    <div class="abt-social-icons">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+                    <div class="team-img">
+                        <img src="images/DSC02531.JPG" alt="">
+                    </div>PG
+                </div>
+
+                <div class="col-md-3 team-grids">
+                    <h5>Zion Zayuni</h5>
+                    <p>He is the Finance manager and Treasurer at Link2hao</p>
                     <div class="abt-social-icons">
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
@@ -149,6 +147,30 @@
         </div>
         <!--//team-->
     </section>
+
+    <div class="who-are-we">
+        <div class="container">
+            <h3>We are no. 1...<span>WHY?</span></h3>
+            <div class="col-md-6 who-grids">
+                <ul class="whogrid_info">
+                    <li class="tick">We give you the best services of all.</li>
+                    <li class="tick">Your reservation is timely. </li>
+                    <li class="tick">No struggle...No hustle.</li>
+                </ul>
+            </div>
+            <div class="col-md-6 who-grids">
+                <ul class="whogrid_info">
+                    <li class="tick">We are accessible all the time.</li>
+                    <li class="tick">We are always open to new ideas and opportunities.</li>
+                    <li class="tick">We are trustworthy, Give a try!!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--/who-we-are-->
+
+
+
 
     <!-- //about-section -->
 

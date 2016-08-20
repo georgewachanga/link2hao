@@ -2,13 +2,11 @@
 @section('content')
     <div class="col-md-6">
 
-        <link href="/css/dropzone.css" rel="stylesheet">
-
         <div class="adminn">
 
             {!! Form::open(array('route' => 'property.store', 'method' => 'POST', 'files' => true)) !!}
 
-            {{Form::label('name', 'propety Name') }}
+            {{Form::label('name', 'property Name') }}
             {{Form::text('name', null, array('class'=>'form-control'))}}
 
             {{Form::label('category', 'prop category') }}
@@ -23,11 +21,14 @@
             {{Form::label('description', 'property desc:') }}
             {{Form::text('description', null, array('class'=>'form-control'))}}
 
-            {{Form::label('price', 'propty price') }}
+            {{Form::label('price', 'property price') }}
             {{Form::text('price', null, array('class'=>'form-control'))}}
 
-            {{Form::label('ownerIdNo', 'owner id no') }}
-            {{Form::text('ownerIdNo', null, array('class'=>'form-control'))}}
+            {{Form::label('owner fullname', 'owner name') }}
+            {{Form::text('fullname', null, array('class'=>'form-control'))}}
+
+            {{Form::label('owner mobile', 'owner mobile') }}
+            {{Form::text('phone', null, array('class'=>'form-control'))}}
 
             {{Form::label('units', 'number of units available') }}
             {{Form::text('units', null, array('class'=>'form-control'))}}

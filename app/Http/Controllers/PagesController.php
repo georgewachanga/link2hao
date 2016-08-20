@@ -35,7 +35,7 @@ class PagesController extends Controller
 
     public function getConsultancy()
     {
-        $this->authorize('owner');
+       // $this->authorize('owner');
         return view('home.consultancy');
     }
     public function getPay()

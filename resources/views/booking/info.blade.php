@@ -9,8 +9,8 @@
     </header>
     <div id="breadcrumb_wrapper">
         <div class="container">
-            <h2>Get to know whats up on Link2hao.com</h2>
-            <h6>Stay updated</h6>
+            <h2>We need to know you for convenience</h2>
+            <h6>It won't take long</h6>
         </div>
     </div>
 </div>
@@ -21,11 +21,13 @@
         <!--- Book-a-test ---->
 <div class="test-booking">
     <div class="container">
-        <h3 class="last-updated">REGISTRATION FORM</h3>
+        <h3 class="last-updated">PLEASE FILL THIS FORM</h3>
         <div class="text-booking-form">
             <div class="col-md-6 text-booking-form-left">
-                <form method="POST" url="">
+                {!! Form::open(array('url' => 'booking/getinfo', 'method' => 'POST')) !!}
                     {!! csrf_field() !!}
+                    {!! Form::hidden('property_id', $property->id) !!}
+
                     <label>First Name <span>*</span></label>
                     <input name="fname" type="text" class="phone" placeholder="">
                     <div class="clearfix"></div>
@@ -46,14 +48,6 @@
                     <input name="phone" type="text" class="phone" placeholder="">
                     <div class="clearfix"></div>
 
-                    <label>Password<span>*</span></label>
-                    <input name="password" type="text" class="phone" placeholder="">
-                    <div class="clearfix"></div>
-
-                    <label>Confirm Password<span>*</span></label>
-                    <input name="password_confirmation" type="text" class="phone" placeholder="">
-                    <div class="clearfix"></div>
-
 
                     <div class="clearfix"></div>
                     <div class="c-lang">
@@ -61,6 +55,8 @@
                     <div class="book-submit">
                         <input type="submit" value="Proceed to Book">
                     </div>
+
+
                 </form>
 
 
@@ -74,7 +70,7 @@
         </div>
         <div class="preventive-desc">
             <h4>What if I fail to get the house i wanted?</h4>
-           <p>We have mechanisms to refund your money way  up to 95%</p>  </div>
+           <p>We have mechanisms to refund your money way  up to Ksh 200/=</p>  </div>
 
 
 

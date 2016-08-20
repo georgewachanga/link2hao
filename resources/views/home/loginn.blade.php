@@ -179,10 +179,9 @@
 
                     <div class="tab-3 resp-tab-content" aria-labelledby="tab_item-3">
                         <div class="reset">
-                            <form action="#" method="post">
+                            <form action="{{ url('/password/reset') }}" method="post">
+                                {!! csrf_field() !!}
                                 <input type="text" Name="Email" placeholder="Email" required="">
-                                <p>(Or)</p>
-                                <input type="text" Name="Phone Number" placeholder="Phone Number" required="">
                                 <input type="submit" value="RESET MY PASSWORD">
                             </form>
                         </div>
@@ -258,7 +257,7 @@
 </div>
 <!-- //Footer -->
 
-<-- //some javascript  by otwani -->
+<!-- //some javascript  by otwani -->
 <script type="text/javascript">
 
     //after alot of fiddling and failing to understand how easyResponsiveTabs.js works
