@@ -69,6 +69,8 @@ class PropertyController extends CrudController{
 
 			$this->edit->add('imagepath', 'Photo', 'image')->move(public_path())->preview(80,80);
 
+			$this->edit->add('map','Position','map')->latlon('latitude', 'longitude');
+
        
         return $this->returnEditView();
     }    

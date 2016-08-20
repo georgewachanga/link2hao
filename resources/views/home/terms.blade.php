@@ -8,7 +8,7 @@
         </header>
         <div id="breadcrumb_wrapper">
             <div class="container">
-                <h2>Terms of Use</h2>
+                <h2>Terms of our service</h2>
                 <h6>add a short description here</h6>
             </div>
         </div>
@@ -16,7 +16,7 @@
     <!--- terms ---->
     <div class="terms">
         <div class="container">
-            <h3>Terms and Conditions</h3>
+            <h3>Please take your time to understand our terms and conditions</h3>
             <h6>Important Points</h6>
             <ol start="1">
                 <li>A fee of Ksh.300 is charged to book a house.</li>
@@ -24,7 +24,7 @@
                 <li> If necessary, one of our agents will be available to take you to the house</li>
                 <li>We will ensure you are fully settled, failure to which you will be refunded 200/=</li>
             </ol>
-            <h6>Exclusions and Limitations</h6>
+            <h6>Take note</h6>
             <p>Our service is to help tenants get the houses of their choice with ease, we provide the missing link between clients and landlords</p>
             <p>We are therefore not responsible for the welfare of our clients as soon as they have reached an agreement with their new landlords, we therefore caution the clients that to be wary of the rules and regulations set by the Landlords</p>
             <p>The stay of the client is an agreement between them and their landlord. we cannot be blamed for anything happening afterwards</p>
@@ -35,8 +35,8 @@
             <h6>Cancellation Policy</h6>
             <p>A fee of 100 /= is chargeble on cancellation</p>
             <p>communicate with our agent or the number given below to request for a cancellation</p>
-            <h6>Modifications & Refunds</h6>
-            <p>If we are unsuccessful in booking you a house, we will refund you 400/=</p>
+            <h6>Refund Terms</h6>
+            <p>If we are unsuccessful in getting you a house, we will refund you 200/= of the amount you paid to us.</p>
             <h6>Availability</h6>
             <p>We only operate in Kakamega town</p>
             <h6>Copyright Notice</h6>
@@ -49,6 +49,8 @@
                         <label>
                             <input type="checkbox" name="accept"> I Accept
                         </label>
+                        {{ Form::hidden('guest_id', $guest->id) }}
+                        {{ Form::hidden('property_id', $property->id) }}
                     </div>
 
                     <input type="submit" value="Submit">
@@ -60,7 +62,6 @@
         </div>
     </div>
     <!--- /terms ---->
-
 
 </section>
 <!-- //Terms of use-section -->

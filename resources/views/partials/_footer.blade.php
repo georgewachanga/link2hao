@@ -14,7 +14,7 @@
                 <h3>Tweets</h3>
                 <ul>
                     <a class="twitter-timeline"
-                       href="https://twitter.com/gikunguru"
+                       href="https://twitter.com/"
                        data-widget-id="724734140185227264"
                        data-tweet-limit="2"
                        data-chrome="nofooter noborders transparent">
