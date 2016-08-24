@@ -33,7 +33,6 @@
         <div class="col-md-8 sing">
             <div class=" single-grid">
                 @include("partials._slider")
-                        <!--img class="img-responsive" src="/imported/images/blog.jpg" alt=""  class="img-responsive"-->
                 <div class="lone-line">
                     <h2>ABOUT HOUSE</h2>
 
@@ -52,21 +51,6 @@
                     @endcan
 
                 </div>
-            </div>
-            <div class="single-bottom">
-
-                <h3>Leave a Comment</h3>
-                <form>
-                    <div class="col-md-6 comment">
-                        <input type="text" placeholder="Name">
-                    </div>
-                    <div class="col-md-6 comment">
-                        <input type="text" placeholder="email">
-                    </div>
-                    <div class="clearfix"> </div>
-                    <textarea placeholder="Message" required=""> </textarea>
-                    <input type="submit" value="Send">
-                </form>
             </div>
 
 
@@ -104,7 +88,7 @@
 
                     @foreach($related as $related_item)
                         <div class="col-md-3 post-top">
-                            <img class="img-responsive " src="/imported/images/s1.jpg" alt="">
+                            <img class="img-responsive " src="/uploads/{{$related_item->images->first() ? $related_item->images->first()->name : "" }}" alt="">
                             <h6>{{ $related_item->name }}</h6>
                             <p>{{ $related_item->description }}</p>
                         </div>

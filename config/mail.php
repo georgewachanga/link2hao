@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'link2hao.info@gmail.com', 'name' => 'admin@link2hao.com'],
 
     /*
     |--------------------------------------------------------------------------

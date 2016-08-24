@@ -8327,7 +8327,10 @@ ul.posts li{
     line-height:1.8em;
 }
 
-
+#comment textarea {
+    max-height: 2%;
+    background-color: #0000CC;
+}
 
 
 

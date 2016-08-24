@@ -52,7 +52,10 @@ class BookingController extends Controller
             $property = Property::findOrFail($request->property_id);
             $tweet = 'New Request:: '.$guest->fname." ".$guest->lname." Phone : ".$guest->phone." wants to book ".$property->name;
 
-            \Twitter::postTweet(['status' => $tweet, 'format' => 'json']);
+            if(\Twitter::postTweet(['status' => $tweet, 'format' => 'json']))
+            {
+                return view('booking.contact')->withMessage('Let us finalize some details, Our term Member will contact you as soon as possible')->with('booked',true);
+            }
 
             return view('booking.contact')->withMessage('Let us finalize some details, Our term Member will contact you as soon as possible')->with('booked',true);
         }

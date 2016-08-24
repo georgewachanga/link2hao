@@ -247,10 +247,10 @@ class PropertyController extends Controller
                 $image_name = 'link2hao_'.$property->id.'_'.time().'_'.$counter.'.'.$image->getClientOriginalExtension();
                 $counter ++;
             }
-            $manager = new ImageManager();
-            $image->insert('images/watermark.png');
-            $image = $manager->make($image)->resize(600,480)->save('uploads/'.$image_name);
-            //$image->move(public_path().'/uploads/', $image_name);
+            /*$manager = new ImageManager();
+            $image = $manager->make($image)->resize(600,480);
+            $image->insert('images/watermark.png')->save('uploads/'.$image_name);*/
+            $image->move(public_path().'/uploads/', $image_name);
             $image = new Image(['name' => $image_name]);
             $property->images()->save($image);
 

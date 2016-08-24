@@ -57,7 +57,7 @@ class UserController extends CrudController{
 		
 			$this->edit->add('email', 'Email', 'text')->rule('required');
 
-			$this->edit->add('password', 'Password', 'password');
+			$this->edit->add('changePassword', 'Password', 'password');
 
        
         return $this->returnEditView();

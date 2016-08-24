@@ -22,5 +22,5 @@
 
 
 
-@include("partials._newsletter")
+@include("partials.comment")
        @include("partials._footer")

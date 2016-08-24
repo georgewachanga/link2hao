@@ -38,6 +38,11 @@
             {{Form::submit('create a new property', array('class'=>'btn btn-success btn-lg btn-block '))}}
             {!! Form::close() !!}
 
+
+        <script src="/js/geolocator.js" type="text/javascript"></script>
+
+            <p><button onclick="geoFindMe()">Show my Location</button> </p>
+            <div id="out"></div>
         </div>
 
 <div>

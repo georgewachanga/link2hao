@@ -9,8 +9,6 @@
 
     @include("partials._slide")
 
-
-<!--partials.search was here-->
 <div class="container-fluid">
 
     <div class="row">
@@ -18,61 +16,7 @@
         <div class="col-md-3 timing">
             <p>advertising section here</p>
 
-                        <!--div class="social-widget">
-                            <h2>Connect with us</h2>
-                            <ul class="courses_social">
-                                <li class="facebook-icon">
-                                    <div>
-                                        <a href="#" class="fa fa-facebook"></a>
-                                        <p>2154</p>
-                                    </div>
-                                </li>
-                                <li class="twitter-icon">
-                                    <div>
-                                        <a href="#" class="fa fa-twitter"></a>
-                                        <p>1425</p>
-                                    </div>
-                                </li>
-                                <li class="gplus-icon">
-                                    <div>
-                                        <a href="#" class="fa fa-google-plus"></a>
-                                        <p>2150</p>
-                                    </div>
-                                </li>
-                                <div class="clearfix"> </div>
-                            </ul>
-                        </div-->
-                        <!--section class="slider">
-                            <h3>Testimonial</h3>
-                            <div class="flexslider">
-                                <ul class="slides">
-                                    <li>
-                                        <div class="banner-info1">
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat quis nostrud.</p>
-                                            <h5><a href="#">Laoreet ,</a>Dateratr since 2015</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="banner-info1">
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, content of a page.</p>
-                                            <h5><a href="#">Distracted ,</a>Dateratr since 2015</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="banner-info1">
-                                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of usin but the majority.</p>
-                                            <h5><a href="#">Suffered ,</a>Dateratr since 2015</h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </section--->
-
         </div>
-
-
-
-
 
         <div><h1 style="text-align: center">{{ strtoupper($message) }}</h1></div>
         <div class="col-md-9">
@@ -82,18 +26,17 @@
                    @foreach($properties->chunk(3) as $propertyChunk)
 
 
-                    <div class="col-md-9 wow fadeInRight" data-wow-delay="0.4s">
+                    <div class="col-md-9 " data-wow-delay="0.4s" id="transist">
 
                         <div class="educate_grid">
                             @foreach($propertyChunk as $property)
                             <div class="col-md-4 room-grid">
                                 <div class="living_box">
                                     <a href="/single/{{ $property->id }}/{{ $property->name }}">
-                                    <a href="single/{{ $property->id }}/{{ $property->name }}">
                                         @if($property->images()->first())
                                             <img src="/uploads/{{ $property->images()->first()->name }}" class="img-responsive" alt=""/>
                                         @else
-                                            <img src="/uploads/{{ $property->images }}" class="img-responsive" alt=""/>
+                                            <img src="/images/no_house.jpg" class="img-responsive" alt=""/>
                                         @endif
                                             <span class="sale-box">
 				                             <span class="sale-label">
@@ -123,20 +66,26 @@
                                     <table border="1" class="propertyDetails">
                                         <tbody><tr>
                                             <td><img src="/imported/images/area.png" alt="" style="margin-right:7px;">{{$features ? $features[0] : ""}}</td>
-                                            <td><img src="/imported/images/bed.png" alt="" style="margin-right:7px;">{{ $features ? $features[1] : ""}}</td>
-                                            <td><img src="/imported/images/drop.png" alt="" style="margin-right:7px;">{{$features ?  $features[1] : ""}}</td>
+                                            <td><img src="/imported/images/bed.png" alt="" style="margin-right:7px;">{{ isset($features[1]) ? $features[1] : ""}}</td>
+                                            <td><img src="/imported/images/drop.png" alt="" style="margin-right:7px;">{{isset($features[2]) ?  $features[2] : ""}}</td>
                                         </tr>
                                         </tbody></table>
-
-
-
-
                                 </div>
                             </div>
                             @endforeach
 
                             <div class="clearfix"></div>
                         </div>
+
+                        <script type="text/javascript">
+                            if(Modernizr.csstransitions){
+                                document.getElementById('transist').className = "col-md-9 wow fadeInRight";
+                            }
+                            else
+                            {
+
+                            }
+                        </script>
                     </div>
                         @endforeach
                 </div>
@@ -147,22 +96,17 @@
                 @if($properties->currentPage() !== 1)
                     <li><a href="{{ $properties->previousPageUrl() }}"><span class="prev">Prev</span></a></li>
                     <li><a href="{{ $properties->url(1) }}"> <span>firstPage</span></a></li>
+                @else
+                    <li><a href="#"><span class="prev">First</span></a> </li>
                 @endif
                     <li><span>.....</span></li>
                 @if($properties->currentPage() !== $properties->lastPage())
                         <li><a href="{{ $properties->url($properties->lastPage()) }}"> <span>lastPage</span></a></li>
                     <li><a href="{{ $properties->nextPageUrl() }}" class="next">Next</a></li>
+                @else
+                    <li><a href="#" class="next">Last</a> </li>
                 @endif
-                <!--li><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">7</a></li>
-                <li><a href="#">8</a></li>
-                <li><span>.....</span></li>
-                <li><a href="#">12</a></li-->
+
             </ul>
 
 
@@ -180,82 +124,11 @@
             <h3>RECOMMENDED HOUSES</h3>
             <p>Here, there and everywhere... what we've been doing</p>
         </div>
-        <!-- <div class="news-section-grids">
-            <div class="col-md-4 news-section-grid">
-                <img src="/images/1.jpg" alt="" />
-                <div class="info">
-                    <a class="news-title" href="single">RIAM HOSTELS</a>
-                    <label>August18</label>
-                    <p>Meet hundreds of house owners just like you and exchange ideas.</p>
-                    <a class="more" href="single">Read more</a>
-                </div>
-            </div>
-            <div class="col-md-4 news-section-grid">
-                <img src="/images/2.jpg" alt="" />
-                <div class="info">
-                    <a class="news-title" href="single">IJAB HOSTELS</a>
-                    <label>August 28</label>
-                    <p>Aimed at improving our customer experience end educate them more.</p>
-                    <a class="more" href="single">Read more</a>
-                </div>
-            </div>
-            <div class="col-md-4 news-section-grid">
-                <img src="/images/3.jpg" alt="" />
-                <div class="info">
-                    <a class="news-title" href="single">PALMLEAF HOSTELS</a>
-                    <label>September 12</label>
-                    <p>Launching our monthly housing magazine to summarize our daily website updatess</p>
-                    <a class="more" href="single">Read more</a>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>-->
+
     </div>
 </div>
 
 <!-- //quick links -->
-
-
-
-<!--div class="living_bottom">
-        <div class="container">
-            <h2 class="title block-title">LATEST HOUSES</h2>
-            <div class="col-md-6 post_left wow fadeInLeft" data-wow-delay="0.4s">
-                <div class="mask1"><img src="/imported/images/pic4.jpg" alt="image" class="img-responsive zoom-img" /></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque cursus, sem eget sagittis sagittis, nisl magna sodales eros, ut feugiat velit velit non turpis. Cras eu nibh dapibus justo fringilla   <a href="single">More</a></p>
-                <div class="divider"></div>
-                <p class="field-content">30 Sep 2015</span></p>
-            </div>
-            <div class="col-md-6 post_left wow fadeInRight" data-wow-delay="0.4s">
-                <div class="mask1"><img src="/imported/images/pic5.jpg" alt="image" class="img-responsive zoom-img" /></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque cursus, sem eget sagittis sagittis, nisl magna sodales eros, ut feugiat velit velit non turpis. Cras eu nibh dapibus justo fringilla   <a href="single">More</a></p>
-                <div class="divider"></div>
-                <p class="field-content">30 Sep 2015</span></p>
-            </div>
-        </div>
-    </div-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Stats -->
     <div class="stats">
@@ -289,11 +162,4 @@
     </div>
     <!-- //Stats -->
     <script type="text/javascript" src="/js/numscroller-1.0.js"></script>
-
-
-
-
-
-
-
 @endsection

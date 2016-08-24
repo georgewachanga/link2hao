@@ -24,10 +24,14 @@ class User extends Authenticatable
        'password', 'remember_token',
     ];
 
-    /*public function setPasswordAttribute($password)
+    public function changePassword()
     {
-        $this->attributes['password'] = bcrypt($password);
-    }*/
+        $password = \Request::input('changePassword');
+        if($password){
+            $this->attributes['password'] = bcrypt($password);
+        }
+
+    }
 
     public function usertype(){
 
@@ -77,10 +81,72 @@ class User extends Authenticatable
     }
 
     public function userRole(){
-        $userRole = \Request::input('UserRole');
+        $userRole = \Request::input('userRole');
         if($userRole)
         {
-            dd($userRole);
+            if($userRole == 1)
+            {
+                $this->makeAdmin();
+            }
+            elseif($userRole == 2)
+            {
+                $this->makeOwner();
+            }
+            elseif($userRole == 3)
+            {
+                $this->makeGuest();
+            }
         }
+    }
+
+    protected function makeAdmin()
+    {
+        if($this->isAdmin())
+        {
+            return true;
+        }
+        elseif($this->getUser() !== null)
+        {
+            $this->getUser()->delete();
+        }
+
+        $admin = Admin::create();
+        $admin->user()->save($this);
+
+        return true;
+    }
+
+    protected function makeOwner()
+    {
+        if($this->isOwner())
+        {
+            return true;
+        }
+        elseif($this->getUser() !== null)
+        {
+            $this->getUser()->delete();
+        }
+
+        $owner = Owner::create();
+        $owner->user()->save($this);
+
+        return true;
+    }
+
+    protected function makeGuest()
+    {
+        if($this->isGuest())
+        {
+            return true;
+        }
+        elseif($this->getUser() !== null)
+        {
+            $this->getUser()->delete();
+        }
+
+        $guest = Guest::create();
+        $guest->user()->save($this);
+
+        return true;
     }
 }

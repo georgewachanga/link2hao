@@ -3,51 +3,32 @@
 
      <div style="margin-top: -55px">
 
-
-          <header class="logo">
+         <header class="logo">
             <h1><a class="cd-logo link link--takiri" href="index.html">Link2hao.com <span>Because housing matters</span></a></h1>
 
-        </header>
-
-
+         </header>
 
          <div id="slider" class="sl-slider-wrapper">
 
             <div class="sl-slider">
 
-                @foreach($property->images as $image)
-                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-                    <div class="sl-slide-inner">
-                        <div><img class="img-responsive " src="/uploads/{{ $image->name }}" alt=""></div>
+                @if(!$property->images->first())
+                    <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                        <div class="sl-slide-inner">
+                            <div><img class="img-responsive " src="/images/no_house_2.jpg" alt=""></div>
 
+                        </div>
                     </div>
-                </div>
+                @endif
+                @foreach($property->images as $image)
+                    <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                        <div class="sl-slide-inner">
+                            <div><img class="img-responsive " src="/uploads/{{ $image->name }}" alt=""></div>
+
+                        </div>
+                    </div>
                 @endforeach
 
-                <!--
-                    <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
-                    <div class="sl-slide-inner">
-                        <div><img class="img-responsive " src="/imported/images/1.jpg" alt=""></div>
-                         </div>
-                </div>
-
-                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
-                    <div class="sl-slide-inner">
-                        <div><img class="img-responsive " src="/imported/images/5.jpg" alt=""></div>
-                        </div>
-                </div>
-
-                <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
-                    <div class="sl-slide-inner">
-                        <div><img class="img-responsive " src="/imported/images/4.jpg" alt=""></div>
-                       </div>
-                </div>
-
-                <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
-                    <div class="sl-slide-inner">
-                        <div><img class="img-responsive " src="/imported/images/3.jpg" alt=""></div>
-                        </div>
-                </div>-->
             </div><!-- /sl-slider -->
 
             <nav id="nav-dots" class="nav-dots">

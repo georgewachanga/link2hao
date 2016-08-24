@@ -12,17 +12,7 @@
             </div>
             <div class="col-md-3 footer one tweet">
                 <h3>Tweets</h3>
-                <ul>
-                    <a class="twitter-timeline"
-                       href="https://twitter.com/"
-                       data-widget-id="724734140185227264"
-                       data-tweet-limit="2"
-                       data-chrome="nofooter noborders transparent">
-                        Tweets by @link2hao</a>
-                    <script>
-                        !function(d,s,id)
-                        {var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                </ul>
+
             </div>
             <div class="col-md-3 footer two">
                 <h3>Keep Connected</h3>

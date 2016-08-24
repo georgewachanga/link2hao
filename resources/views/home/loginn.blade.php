@@ -179,9 +179,22 @@
 
                     <div class="tab-3 resp-tab-content" aria-labelledby="tab_item-3">
                         <div class="reset">
-                            <form action="{{ url('/password/reset') }}" method="post">
+                            <form action="{{ url('/password/email') }}" method="post">
                                 {!! csrf_field() !!}
-                                <input type="text" Name="Email" placeholder="Email" required="">
+
+                                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+
+                                    <div class="col-md-6">
+                                        <input type="text" placeholder="Email" class="form-control" name="email" value="{{ old('email') }}">
+
+                                        @if ($errors->has('email'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                </div>
+
                                 <input type="submit" value="RESET MY PASSWORD">
                             </form>
                         </div>
@@ -262,8 +275,8 @@
 
     //after alot of fiddling and failing to understand how easyResponsiveTabs.js works
     //I decided to do stuff the oldschool way, click 'em up and let things roll.
-
     $(document).ready(function(){
+
 
                 //get the current pathname of object
                 var page_name = window.location.pathname;
@@ -274,6 +287,7 @@
                 }
                 else if( page_name == '/register')
                 {
+
                     document.getElementById("#2").click();
                 }
                 else if( page_name == '/reset')
